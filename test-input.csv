@@ -1,0 +1,16 @@
+Package;Component
+resources/DB configs;core-data-access-layer
+resources/Spring configs;core-lifecycle
+resources/Teraform scripts;core-integrations
+resources/internationalization;core-i18n
+resources/Struts configs;core-web-and-ui, core-lifecycle
+resources/other configs;core-lifecycle
+com.jivesoftware.community.audit.aop;core-audit
+com.jive.api.aaa;core-authentication, core-authorization, core-audit
+com.jive.api.aaa.impl;core-authentication, core-authorization, core-audit
+com.jive.api.access;core-api
+com.jive.api.access.dao;core-api
+com.jive.api.access.dao.impl;core-api
+com.jive.api.access.impl;core-api
+com.jivesoftware.api;core-api
+com.jivesoftware.api.base.entities.tiles;core-api

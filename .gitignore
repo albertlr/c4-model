@@ -1,0 +1,11 @@
+# Project exclude paths
+/target/
+.idea
+*.iml
+*.ipr
+*.iws
+*.json
+*.out
+*.out.pdf
+*.dot.pdf
+*.bak

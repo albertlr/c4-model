@@ -1,0 +1,2047 @@
+Package;Component
+resources/DB configs;core-data-access-layer
+resources/Spring configs;core-lifecycle
+resources/Teraform scripts;core-integrations
+resources/internationalization;core-i18n
+resources/Struts configs;core-web-and-ui, core-lifecycle
+resources/other configs;core-lifecycle
+com.jivesoftware.community.audit.aop;core-audit
+com.jive.api.aaa;core-authentication, core-authorization, core-audit
+com.jive.api.aaa.impl;core-authentication, core-authorization, core-audit
+com.jive.api.access;core-api
+com.jive.api.access.dao;core-api
+com.jive.api.access.dao.impl;core-api
+com.jive.api.access.impl;core-api
+com.jivesoftware.api;core-api
+com.jivesoftware.api.base.entities.tiles;core-api
+com.jive.api.access.upgrade;core-authorization
+com.jive.api.entitlement;core-authorization
+com.jive.api.entitlement.dao;core-authorization
+com.jive.api.entitlement.dao.impl;core-authorization
+com.jive.api.entitlement.event;core-authorization
+com.jive.api.entitlement.filter;core-authorization
+com.jive.api.entitlement.impl;core-authorization
+com.jive.api.entitlement.type;core-authorization
+com.jivesoftware.api.audit;core-audit
+com.jivesoftware.api.audit.interceptor;core-audit
+com.jivesoftware.api.binary.daos;core-content
+com.jivesoftware.api.binary.daos.impl;core-content
+com.jivesoftware.api.binary.events;core-content
+com.jivesoftware.api.binary.filters;core-content
+com.jivesoftware.api.binary.listeners;core-content
+com.jivesoftware.api.binary.managers;core-content
+com.jivesoftware.api.binary.managers.impl;core-content
+com.jivesoftware.api.binary.models;core-content
+com.jivesoftware.api.binary.models.impl;core-content
+com.jivesoftware.api.binary.types;core-content
+com.jivesoftware.api.binary.upgrade;core-content
+com.jivesoftware.api.binary.v1.entities;core-content
+com.jivesoftware.api.binary.v1.services;core-content
+com.jivesoftware.api.client;core-web-and-ui
+com.jivesoftware.api.client.http;core-connectivity
+com.jivesoftware.api.client.http.request;core-connectivity
+com.jivesoftware.api.common.filters;core-web-and-ui
+com.jivesoftware.api.common.providers.tiles;core-extension-points
+com.jivesoftware.api.connects.dao;core-connectivity
+com.jivesoftware.api.connects.dao.impl;core-connectivity
+com.jivesoftware.api.connects.event;core-connectivity
+com.jivesoftware.api.connects.filter;core-connectivity
+com.jivesoftware.api.connects.jsonrpc;core-connectivity
+com.jivesoftware.api.connects.manager;core-connectivity
+com.jivesoftware.api.connects.manager.impl;core-connectivity
+com.jivesoftware.api.connects.model;core-connectivity
+com.jivesoftware.api.connects.model.impl;core-connectivity
+com.jivesoftware.api.connects.service;core-connectivity
+com.jivesoftware.api.connects.service.filter;core-connectivity
+com.jivesoftware.api.connects.service.v1;core-connectivity
+com.jivesoftware.api.connects.service.v1.decorator;core-connectivity
+com.jivesoftware.api.connects.service.v1.impl;core-connectivity
+com.jivesoftware.api.connects.task;core-connectivity
+com.jivesoftware.api.connects.type;core-connectivity
+com.jivesoftware.api.connects.util;core-connectivity
+com.jivesoftware.api.core;core-api
+com.jivesoftware.api.core.aaa;core-api
+com.jivesoftware.api.core.app;core-api
+com.jivesoftware.api.core.base.entities;core-api
+com.jivesoftware.api.core.base.enums;core-api
+com.jivesoftware.api.core.base.processor;core-api
+com.jivesoftware.api.core.converters;core-api
+com.jivesoftware.api.core.converters.links;core-api
+com.jivesoftware.api.core.converters.uri;core-api
+com.jivesoftware.api.core.cxf;core-api
+com.jivesoftware.api.core.entities;core-api
+com.jivesoftware.api.core.ext;core-api
+com.jivesoftware.api.core.ext.impl;core-api
+com.jivesoftware.api.core.features;core-api
+com.jivesoftware.api.core.filters;core-api
+com.jivesoftware.api.core.html;core-api
+com.jivesoftware.api.core.html.impl;core-api
+com.jivesoftware.api.core.i18n;core-api
+com.jivesoftware.api.core.i18n.impl;core-api
+com.jivesoftware.api.core.interceptors;core-api
+com.jivesoftware.api.core.jaxrs;core-api
+com.jivesoftware.api.core.jsonrpc;core-api
+com.jivesoftware.api.core.providers;core-api
+com.jivesoftware.api.core.runas;core-api
+com.jivesoftware.api.core.services;core-api
+com.jivesoftware.api.core.services.content;core-api
+com.jivesoftware.api.core.spring;core-api
+com.jivesoftware.api.core.spring.beans;core-api
+com.jivesoftware.api.core.spring.parsers;core-api
+com.jivesoftware.api.core.types;core-api
+com.jivesoftware.api.core.types.annotations;core-api
+com.jivesoftware.api.core.util;core-api
+com.jivesoftware.api.core.v2;core-api
+com.jivesoftware.api.core.v2.converters;core-api
+com.jivesoftware.api.core.v2.converters.activity;core-api
+com.jivesoftware.api.core.v2.converters.communications;core-api
+com.jivesoftware.api.core.v2.converters.containers;core-api
+com.jivesoftware.api.core.v2.converters.content;core-api
+com.jivesoftware.api.core.v2.converters.content.documents;core-api
+com.jivesoftware.api.core.v2.converters.content.summary;core-api
+com.jivesoftware.api.core.v2.converters.links;core-api
+com.jivesoftware.api.core.v2.converters.uri;core-api
+com.jivesoftware.api.core.v2.converters.users;core-api
+com.jivesoftware.api.core.v2.cxf;core-api
+com.jivesoftware.api.core.v2.entities;core-api
+com.jivesoftware.api.core.v2.entities.activity;core-api
+com.jivesoftware.api.core.v2.entities.communications;core-api
+com.jivesoftware.api.core.v2.entities.containers;core-api
+com.jivesoftware.api.core.v2.entities.content;core-api
+com.jivesoftware.api.core.v2.entities.content.summary;core-api
+com.jivesoftware.api.core.v2.entities.users;core-api
+com.jivesoftware.api.core.v2.filters;core-api
+com.jivesoftware.api.core.v2.processors;core-api
+com.jivesoftware.api.core.v2.processors.anchors;core-api
+com.jivesoftware.api.core.v2.providers;core-api
+com.jivesoftware.api.core.v2.providers.communications;core-api
+com.jivesoftware.api.core.v2.providers.communications.validators;core-api
+com.jivesoftware.api.core.v2.providers.containers;core-api
+com.jivesoftware.api.core.v2.providers.content;core-api
+com.jivesoftware.api.core.v2.providers.users;core-api
+com.jivesoftware.api.core.v2.services;core-api
+com.jivesoftware.api.core.v2.services.communications;core-api
+com.jivesoftware.api.core.v2.services.containers;core-api
+com.jivesoftware.api.core.v2.services.content;core-api
+com.jivesoftware.api.core.v2.services.users;core-api
+com.jivesoftware.api.core.v2.types;core-api
+com.jivesoftware.api.core.v2.util;core-api
+com.jivesoftware.api.core.v3.converters;core-api
+com.jivesoftware.api.core.v3.converters.abuse;core-api
+com.jivesoftware.api.core.v3.converters.activity;core-api
+com.jivesoftware.api.core.v3.converters.addons;core-api
+com.jivesoftware.api.core.v3.converters.admin;core-api
+com.jivesoftware.api.core.v3.converters.cache;core-api
+com.jivesoftware.api.core.v3.converters.communications;core-api
+com.jivesoftware.api.core.v3.converters.content;core-api
+com.jivesoftware.api.core.v3.converters.custom.metadata;core-api
+com.jivesoftware.api.core.v3.converters.entitlements;core-api
+com.jivesoftware.api.core.v3.converters.metadata;core-api
+com.jivesoftware.api.core.v3.converters.moderation;core-api
+com.jivesoftware.api.core.v3.converters.places;core-api
+com.jivesoftware.api.core.v3.converters.places.tab;core-api
+com.jivesoftware.api.core.v3.converters.playbox;core-api
+com.jivesoftware.api.core.v3.converters.rtc;core-api
+com.jivesoftware.api.core.v3.converters.rte;core-api
+com.jivesoftware.api.core.v3.converters.sections;core-api
+com.jivesoftware.api.core.v3.converters.storage;core-api
+com.jivesoftware.api.core.v3.converters.tiles;core-api
+com.jivesoftware.api.core.v3.converters.translation;core-api
+com.jivesoftware.api.core.v3.converters.users;core-api
+com.jivesoftware.api.core.v3.converters.video;core-api
+com.jivesoftware.api.core.v3.converters.webhooks;core-api
+com.jivesoftware.api.core.v3.customizers;core-api
+com.jivesoftware.api.core.v3.documentation;core-api
+com.jivesoftware.api.core.v3.entities;core-api
+com.jivesoftware.api.core.v3.entities.abuse;core-api
+com.jivesoftware.api.core.v3.entities.activity;core-api
+com.jivesoftware.api.core.v3.entities.addon;core-api
+com.jivesoftware.api.core.v3.entities.admin;core-api
+com.jivesoftware.api.core.v3.entities.batch;core-api
+com.jivesoftware.api.core.v3.entities.communications;core-api
+com.jivesoftware.api.core.v3.entities.content;core-api
+com.jivesoftware.api.core.v3.entities.custom.metadata;core-api
+com.jivesoftware.api.core.v3.entities.entitlements;core-api
+com.jivesoftware.api.core.v3.entities.metadata;core-api
+com.jivesoftware.api.core.v3.entities.moderation;core-api
+com.jivesoftware.api.core.v3.entities.places;core-api
+com.jivesoftware.api.core.v3.entities.places.tab;core-api
+com.jivesoftware.api.core.v3.entities.playbox;core-api
+com.jivesoftware.api.core.v3.entities.playbox.UserPanel;core-api
+com.jivesoftware.api.core.v3.entities.rtc;core-api
+com.jivesoftware.api.core.v3.entities.rte;core-api
+com.jivesoftware.api.core.v3.entities.solutions.supportcenter;core-api
+com.jivesoftware.api.core.v3.entities.storage;core-api
+com.jivesoftware.api.core.v3.entities.tiles;core-api
+com.jivesoftware.api.core.v3.entities.translation;core-api
+com.jivesoftware.api.core.v3.entities.users;core-api
+com.jivesoftware.api.core.v3.entities.video;core-api
+com.jivesoftware.api.core.v3.entities.webhooks;core-api
+com.jivesoftware.api.core.v3.errors;core-api
+com.jivesoftware.api.core.v3.exceptions;core-api
+com.jivesoftware.api.core.v3.generators;core-api
+com.jivesoftware.api.core.v3.generators.admin;core-api
+com.jivesoftware.api.core.v3.generators.metadata;core-api
+com.jivesoftware.api.core.v3.handlers;core-api
+com.jivesoftware.api.core.v3.js;core-api
+com.jivesoftware.api.core.v3.js.templates;core-api
+com.jivesoftware.api.core.v3.processors;core-api
+com.jivesoftware.api.core.v3.providers;core-api
+com.jivesoftware.api.core.v3.providers.activity;core-api
+com.jivesoftware.api.core.v3.providers.activity.transformer;core-api
+com.jivesoftware.api.core.v3.providers.addons;core-api
+com.jivesoftware.api.core.v3.providers.admin;core-api
+com.jivesoftware.api.core.v3.providers.communications;core-api
+com.jivesoftware.api.core.v3.providers.content;core-api
+com.jivesoftware.api.core.v3.providers.content.outcome;core-api
+com.jivesoftware.api.core.v3.providers.content.patch;core-api
+com.jivesoftware.api.core.v3.providers.custom.metadata;core-api
+com.jivesoftware.api.core.v3.providers.entitlements;core-api
+com.jivesoftware.api.core.v3.providers.metadata;core-api
+com.jivesoftware.api.core.v3.providers.moderation;core-api
+com.jivesoftware.api.core.v3.providers.places;core-api
+com.jivesoftware.api.core.v3.providers.places.tab;core-api
+com.jivesoftware.api.core.v3.providers.playbox;core-api
+com.jivesoftware.api.core.v3.providers.proxy;core-api
+com.jivesoftware.api.core.v3.providers.rtc;core-api
+com.jivesoftware.api.core.v3.providers.rte;core-api
+com.jivesoftware.api.core.v3.providers.sections;core-api
+com.jivesoftware.api.core.v3.providers.solutions.supportcenter;core-api
+com.jivesoftware.api.core.v3.providers.storage;core-api
+com.jivesoftware.api.core.v3.providers.tiles;core-api
+com.jivesoftware.api.core.v3.providers.transformation;core-api
+com.jivesoftware.api.core.v3.providers.translation;core-api
+com.jivesoftware.api.core.v3.providers.users;core-api
+com.jivesoftware.api.core.v3.providers.video;core-api
+com.jivesoftware.api.core.v3.providers.webhooks;core-api
+com.jivesoftware.api.core.v3.services;core-api
+com.jivesoftware.api.core.v3.services.activity;core-api
+com.jivesoftware.api.core.v3.services.addon;core-api
+com.jivesoftware.api.core.v3.services.admin;core-api
+com.jivesoftware.api.core.v3.services.batch;core-api
+com.jivesoftware.api.core.v3.services.communications;core-api
+com.jivesoftware.api.core.v3.services.content;core-api
+com.jivesoftware.api.core.v3.services.custom.metadata;core-api
+com.jivesoftware.api.core.v3.services.js;core-api
+com.jivesoftware.api.core.v3.services.metadata;core-api
+com.jivesoftware.api.core.v3.services.news;core-api
+com.jivesoftware.api.core.v3.services.places;core-api
+com.jivesoftware.api.core.v3.services.playbox;core-api
+com.jivesoftware.api.core.v3.services.proxy;core-api
+com.jivesoftware.api.core.v3.services.rtc;core-api
+com.jivesoftware.api.core.v3.services.rte;core-api
+com.jivesoftware.api.core.v3.services.solutions.supportcenter;core-api
+com.jivesoftware.api.core.v3.services.storage;core-api
+com.jivesoftware.api.core.v3.services.storage.context;core-api
+com.jivesoftware.api.core.v3.services.storage.filters;core-api
+com.jivesoftware.api.core.v3.services.tiles;core-api
+com.jivesoftware.api.core.v3.services.transformation;core-api
+com.jivesoftware.api.core.v3.services.translation;core-api
+com.jivesoftware.api.core.v3.services.users;core-api
+com.jivesoftware.api.core.v3.services.video;core-api
+com.jivesoftware.api.core.v3.services.webhooks;core-api
+com.jivesoftware.api.core.v3.types;core-api
+com.jivesoftware.api.core.v3.util;core-api
+com.jivesoftware.api.core.versions;core-api
+com.jivesoftware.api.event.listener;core-lifecycle
+com.jivesoftware.api.helper;core-utility
+com.jivesoftware.api.jaxrs;core-web-and-ui
+com.jivesoftware.api.jcx.v1;core-api
+com.jivesoftware.api.jcx.v1.entities;core-api
+com.jivesoftware.api.jcx.v1.impl;core-api
+com.jivesoftware.api.jivelinks.v1.converters;core-api
+com.jivesoftware.api.jivelinks.v1.converters.content;core-api
+com.jivesoftware.api.jivelinks.v1.converters.tiles;core-api
+com.jivesoftware.api.jivelinks.v1.converters.users;core-api
+com.jivesoftware.api.jivelinks.v1.entities.tiles;core-api
+com.jivesoftware.api.jivelinks.v1.generators;core-api
+com.jivesoftware.api.jivelinks.v1.providers;core-api
+com.jivesoftware.api.jivelinks.v1.providers.content;core-api
+com.jivesoftware.api.jivelinks.v1.providers.tiles;core-api
+com.jivesoftware.api.jivelinks.v1.services;core-api
+com.jivesoftware.api.jivelinks.v1.services.tiles;core-api
+com.jivesoftware.api.jivelinks.v1.types;core-api
+com.jivesoftware.api.jivelinks.v1.upgrade;core-api
+com.jivesoftware.api.jivelinks.v1.util;core-api
+com.jivesoftware.api.qe.v1.services;core-api
+com.jivesoftware.api.throttling;core-api
+com.jivesoftware.api.throttling.event;core-api
+com.jivesoftware.api.throttling.impl;core-api
+com.jivesoftware.api.throttling.rest;core-api
+com.jivesoftware.base;core-lifecycle
+com.jivesoftware.base.aaa;core-authentication
+com.jivesoftware.base.admin;core-administration
+com.jivesoftware.base.cache;core-user-management
+com.jivesoftware.base.credentials;core-authentication
+com.jivesoftware.base.credentials.dao;core-authentication
+com.jivesoftware.base.credentials.dao.impl;core-authentication
+com.jivesoftware.base.credentials.impl;core-authentication
+com.jivesoftware.base.crypto.pki;core-authentication
+com.jivesoftware.base.cxf;core-api
+com.jivesoftware.base.cxf.jaxrs;core-api
+com.jivesoftware.base.database;core-data-access-layer, core-user-management, core-lifecycle
+com.jivesoftware.base.database.dao;core-data-access-layer, core-user-management
+com.jivesoftware.base.database.dao.impl;core-data-access-layer, core-user-management
+com.jivesoftware.base.database.sequence;core-data-access-layer
+com.jivesoftware.base.dom;core-web-and-ui
+com.jivesoftware.base.event;core-lifecycle
+com.jivesoftware.base.event.v2;core-lifecycle, core-notification
+com.jivesoftware.base.ldap;core-user-management
+com.jivesoftware.base.ldap.control;core-user-management
+com.jivesoftware.base.ldap.debug;core-user-management
+com.jivesoftware.base.ldap.defaults;core-user-management
+com.jivesoftware.base.ldap.impl;core-user-management
+com.jivesoftware.base.log;core-administration
+com.jivesoftware.base.plugin;core-extension-points
+com.jivesoftware.base.plugin.configurators;core-extension-points
+com.jivesoftware.base.plugin.dao;core-extension-points
+com.jivesoftware.base.plugin.guice;core-extension-points, core-web-and-ui
+com.jivesoftware.base.plugin.impl;core-extension-points
+com.jivesoftware.base.profile;core-authentication
+com.jivesoftware.base.profile.cache;core-authentication
+com.jivesoftware.base.profiling;core-monitoring
+com.jivesoftware.base.profiling.http;core-monitoring
+com.jivesoftware.base.proxy;core-authentication, core-authorization
+com.jivesoftware.base.taskmanager;core-task-engine
+com.jivesoftware.base.taskmanager.admin;core-task-engine
+com.jivesoftware.base.taskmanager.impl;core-task-engine
+com.jivesoftware.base.template;core-web-and-ui
+com.jivesoftware.base.ui;core-web-and-ui
+com.jivesoftware.base.update;core-extension-points
+com.jivesoftware.base.util;core-authorization
+com.jivesoftware.base.util.storage;core-storage-integration
+com.jivesoftware.base.util.vitals;core-monitoring
+com.jivesoftware.base.views;core-web-and-ui
+com.jivesoftware.base.wiki;core-web-and-ui
+com.jivesoftware.cache.spi;core-cache
+com.jivesoftware.cache.util.spi;core-cache
+com.jivesoftware.clearspace.event;core-lifecycle
+com.jivesoftware.clearspace.event.dwr;core-lifecycle
+com.jivesoftware.clearspace.event.core-extension-points;core-lifecycle
+com.jivesoftware.clearspace.event.struts;core-lifecycle
+com.jivesoftware.clearspace.event.plugin;core-extension-points
+com.jivesoftware.community;core-content
+com.jivesoftware.community.aaa;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.apps.rest.admin;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.authz;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.authz.util;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.delegatedsso;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.impl;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.otp;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.otp.dao;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.security;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.action;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.action.admin;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.custom;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.custom.config;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.custom.exceptions;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.custom.filters;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.custom.serviceclient;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.external;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.external.identity;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.external.identity.cache;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.external.login;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.facebook;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.ldap;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.openidconnect;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.openidconnect.external;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.rest;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.rest.admin;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.saml;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.saml.filter;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.saml.metadata;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.saml.processor;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.sso.saml.storage;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.stateless;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.stateless.filter;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.stateless.thin;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.stateless.thin.encrypt;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.stateless.thin.event;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.stateless.thin.secret;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.stateless.thin.serializable;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.stateless.thin.translator;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.aaa.util.spring;core-authentication, core-authorization, core-audit
+com.jivesoftware.community.abuse;core-moderation
+com.jivesoftware.community.acclaim;core-content
+com.jivesoftware.community.acclaim.action;core-content
+com.jivesoftware.community.acclaim.admin.action;core-content
+com.jivesoftware.community.acclaim.dao;core-content
+com.jivesoftware.community.acclaim.dao.impl;core-content
+com.jivesoftware.community.acclaim.dao.sql;core-content
+com.jivesoftware.community.acclaim.event;core-content
+com.jivesoftware.community.acclaim.impl;core-content
+com.jivesoftware.community.acclaim.impl.cache;core-content
+com.jivesoftware.community.acclaim.impl.listener;core-content
+com.jivesoftware.community.acclaim.impl.provider;core-content
+com.jivesoftware.community.acclaim.objecttype;core-content
+com.jivesoftware.community.acclaim.proxy;core-content
+com.jivesoftware.community.acclaim.rest;core-content
+com.jivesoftware.community.acclaim.rest.impl;core-content
+com.jivesoftware.community.acclaim.util;core-content
+com.jivesoftware.community.acclaim.widget;core-content
+com.jivesoftware.community.action;core-web-and-ui
+com.jivesoftware.community.action.admin;core-web-and-ui
+com.jivesoftware.community.action.admin.ldap;core-web-and-ui
+com.jivesoftware.community.action.admin.util;core-web-and-ui
+com.jivesoftware.community.action.profile;core-web-and-ui
+com.jivesoftware.community.action.setup;core-web-and-ui
+com.jivesoftware.community.action.tile;core-web-and-ui
+com.jivesoftware.community.action.uiextensions;core-web-and-ui
+com.jivesoftware.community.action.unsupportedbrowser;core-web-and-ui
+com.jivesoftware.community.action.util;core-web-and-ui
+com.jivesoftware.community.activity.events;core-activity-stream
+com.jivesoftware.community.activity.popularity;core-activity-stream
+com.jivesoftware.community.activity.popularity.events;core-activity-stream
+com.jivesoftware.community.activity.popularity.impl;core-activity-stream
+com.jivesoftware.community.activity.popularity.proxy;core-activity-stream
+com.jivesoftware.community.activity.popularity.type;core-activity-stream
+com.jivesoftware.community.activity.rest;core-activity-stream
+com.jivesoftware.community.activity.rest.impl;core-activity-stream
+com.jivesoftware.community.activity.type;core-activity-stream
+com.jivesoftware.community.addons;core-extension-points
+com.jivesoftware.community.addons.action;core-extension-points
+com.jivesoftware.community.addons.impl;core-extension-points
+com.jivesoftware.community.addons.impl.util;core-extension-points
+com.jivesoftware.community.addons.navbar;core-extension-points
+com.jivesoftware.community.addons.view;core-extension-points
+com.jivesoftware.community.admin;core-administration
+com.jivesoftware.community.admin.action;core-administration
+com.jivesoftware.community.admin.pageviews;core-administration
+com.jivesoftware.community.analytics;core-analytics
+com.jivesoftware.community.analytics.action;core-analytics
+com.jivesoftware.community.analytics.impact;core-analytics
+com.jivesoftware.community.analytics.impact.cloudalytics;core-analytics
+com.jivesoftware.community.analytics.impact.rest;core-analytics
+com.jivesoftware.community.analytics.impact.rest.dto;core-analytics
+com.jivesoftware.community.analytics.impact.rest.dto.response;core-analytics
+com.jivesoftware.community.analytics.impact.rest.dto.response.impl;core-analytics
+com.jivesoftware.community.analytics.impact.rest.impl;core-analytics
+com.jivesoftware.community.analytics.impact.soy;core-analytics
+com.jivesoftware.community.analytics.impact.util;core-analytics
+com.jivesoftware.community.announcements;core-content
+com.jivesoftware.community.announcements.action;core-content
+com.jivesoftware.community.announcements.authz;core-content
+com.jivesoftware.community.announcements.data.dao;core-content
+com.jivesoftware.community.announcements.data.dao.impl;core-content
+com.jivesoftware.community.announcements.data.dao.userprop;core-content
+com.jivesoftware.community.announcements.data.dao.userprop.impl;core-content
+com.jivesoftware.community.announcements.data.provider;core-content
+com.jivesoftware.community.announcements.data.provider.impl;core-content
+com.jivesoftware.community.announcements.data.provider.impl.cache;core-content
+com.jivesoftware.community.announcements.impl;core-content
+com.jivesoftware.community.announcements.proxy;core-content
+com.jivesoftware.community.announcements.rest;core-content
+com.jivesoftware.community.announcements.rest.impl;core-content
+com.jivesoftware.community.announcements.type;core-content
+com.jivesoftware.community.announcements.type.impl;core-content
+com.jivesoftware.community.antivirus;core-integrations
+com.jivesoftware.community.antivirus.actions;core-integrations
+com.jivesoftware.community.antivirus.entry;core-integrations
+com.jivesoftware.community.antivirus.listeners;core-integrations
+com.jivesoftware.community.antivirus.manager;core-integrations
+com.jivesoftware.community.antivirus.scanrecord;core-integrations
+com.jivesoftware.community.antivirus.scanrecord.dao;core-integrations
+com.jivesoftware.community.antivirus.scanrecord.manager;core-integrations
+com.jivesoftware.community.antivirus.tasks;core-integrations
+com.jivesoftware.community.antivirus.tenancy;core-integrations
+com.jivesoftware.community.antivirus.v3.converters;core-integrations
+com.jivesoftware.community.antivirus.v3.entities;core-integrations
+com.jivesoftware.community.antivirus.v3.providers;core-integrations
+com.jivesoftware.community.antivirus.v3.services;core-integrations
+com.jivesoftware.community.antivirus.virusscanner;core-integrations
+com.jivesoftware.community.antivirus.virusscanner.datasource;core-integrations
+com.jivesoftware.community.antivirus.virusscanner.message;core-integrations
+com.jivesoftware.community.antivirus.virusscanner.schemes.icap;core-integrations
+com.jivesoftware.community.antivirus.virusscanner.schemes.icap.mcafee;core-integrations
+com.jivesoftware.community.antivirus.virusscanner.schemes.tcp;core-integrations
+com.jivesoftware.community.antivirus.virusscanner.schemes.tcp.clamav;core-integrations
+com.jivesoftware.community.antivirus.virusscanner.violations;core-integrations
+com.jivesoftware.community.app;core-extension-points
+com.jivesoftware.community.app.activity;core-extension-points
+com.jivesoftware.community.app.activity.builder;core-extension-points
+com.jivesoftware.community.app.activity.poll;core-extension-points
+com.jivesoftware.community.app.api;core-extension-points
+com.jivesoftware.community.app.dao;core-extension-points
+com.jivesoftware.community.app.dao.impl;core-extension-points
+com.jivesoftware.community.app.data;core-extension-points
+com.jivesoftware.community.app.data.impl;core-extension-points
+com.jivesoftware.community.app.data.impl.cache;core-extension-points
+com.jivesoftware.community.app.development;core-extension-points
+com.jivesoftware.community.app.development.dao;core-extension-points
+com.jivesoftware.community.app.development.event;core-extension-points
+com.jivesoftware.community.app.development.filter;core-extension-points
+com.jivesoftware.community.app.development.impl;core-extension-points
+com.jivesoftware.community.app.development.jsonrpc;core-extension-points
+com.jivesoftware.community.app.development.services;core-extension-points
+com.jivesoftware.community.app.development.type;core-extension-points
+com.jivesoftware.community.app.entitlements;core-extension-points
+com.jivesoftware.community.app.event;core-extension-points
+com.jivesoftware.community.app.filter;core-extension-points
+com.jivesoftware.community.app.impl;core-extension-points
+com.jivesoftware.community.app.impl.alert;core-extension-points
+com.jivesoftware.community.app.impl.cache;core-extension-points
+com.jivesoftware.community.app.impl.error;core-extension-points
+com.jivesoftware.community.app.impl.featureprovider;core-extension-points
+com.jivesoftware.community.app.install;core-extension-points
+com.jivesoftware.community.app.market;core-extension-points
+com.jivesoftware.community.app.market.api;core-extension-points
+com.jivesoftware.community.app.market.impl;core-extension-points
+com.jivesoftware.community.app.market.impl.sync;core-extension-points
+com.jivesoftware.community.app.market.whitelist;core-extension-points
+com.jivesoftware.community.app.oauth;core-extension-points
+com.jivesoftware.community.app.proxy;core-extension-points
+com.jivesoftware.community.app.rest;core-extension-points
+com.jivesoftware.community.app.rest.admin;core-extension-points
+com.jivesoftware.community.app.rest.admin.impl;core-extension-points
+com.jivesoftware.community.app.rest.impl;core-extension-points
+com.jivesoftware.community.app.rest.jsonrpc;core-extension-points
+com.jivesoftware.community.app.struts.action;core-extension-points
+com.jivesoftware.community.app.type;core-extension-points
+com.jivesoftware.community.app.upgrade;core-extension-points
+com.jivesoftware.community.app.view;core-extension-points
+com.jivesoftware.community.app.view.helper;core-extension-points
+com.jivesoftware.community.app.view.helper.impl;core-extension-points
+com.jivesoftware.community.app.view.helper.impl.applinkstrategies;core-extension-points
+com.jivesoftware.community.assets;core-legacy
+com.jivesoftware.community.assets.dao;core-legacy
+com.jivesoftware.community.assets.dao.impl;core-legacy
+com.jivesoftware.community.assets.ext;core-legacy
+com.jivesoftware.community.assets.ext.impl;core-legacy
+com.jivesoftware.community.assets.icon;core-legacy
+com.jivesoftware.community.assets.impl;core-legacy
+com.jivesoftware.community.assets.struts;core-legacy
+com.jivesoftware.community.assets.utils;core-legacy
+com.jivesoftware.community.attachments;core-content
+com.jivesoftware.community.audit;core-audit
+com.jivesoftware.community.audit.aop;core-audit
+com.jivesoftware.community.audit.impl;core-audit
+com.jivesoftware.community.audit.proxy;core-audit
+com.jivesoftware.community.avatar;core-user-management
+com.jivesoftware.community.base.filter;core-content
+com.jivesoftware.community.base.provider;core-web-and-ui
+com.jivesoftware.community.base.rest;core-api
+com.jivesoftware.community.blogs;core-content
+com.jivesoftware.community.blogs.entitlements;core-content, core-authorization
+com.jivesoftware.community.blogs.impl;core-content
+com.jivesoftware.community.blogs.objecttype;core-content
+com.jivesoftware.community.bookmarklet.action;core-content
+com.jivesoftware.community.bookmarks;core-content
+com.jivesoftware.community.bookmarks.rest;core-content, core-api
+com.jivesoftware.community.bridge;core-integrations
+com.jivesoftware.community.bridge.action;core-integrations
+com.jivesoftware.community.bridge.bar;core-integrations
+com.jivesoftware.community.bridge.bar.impl;core-integrations
+com.jivesoftware.community.bridge.dao;core-integrations
+com.jivesoftware.community.bridge.dao.impl;core-integrations
+com.jivesoftware.community.bridge.events;core-integrations
+com.jivesoftware.community.bridge.impl;core-integrations
+com.jivesoftware.community.bridge.remote;core-integrations
+com.jivesoftware.community.bridge.remote.impl;core-integrations
+com.jivesoftware.community.bridgedcontent;core-integrations
+com.jivesoftware.community.bridgedcontent.bridgebar;core-integrations
+com.jivesoftware.community.bridgedcontent.dao;core-integrations
+com.jivesoftware.community.bridgedcontent.dao.impl;core-integrations
+com.jivesoftware.community.bridgedcontent.events;core-integrations
+com.jivesoftware.community.bridgedcontent.impl;core-integrations
+com.jivesoftware.community.bridgedcontent.remote;core-integrations
+com.jivesoftware.community.bridgedcontent.remote.dao;core-integrations
+com.jivesoftware.community.bridgedcontent.remote.dao.impl;core-integrations
+com.jivesoftware.community.bridgedcontent.remote.impl;core-integrations
+com.jivesoftware.community.bridgedcontent.type;core-integrations
+com.jivesoftware.community.bridgedcontent.type.impl;core-integrations
+com.jivesoftware.community.browse;core-web-and-ui
+com.jivesoftware.community.browse.filter;core-web-and-ui
+com.jivesoftware.community.browse.filter.favorites;core-web-and-ui
+com.jivesoftware.community.browse.filter.group;core-web-and-ui
+com.jivesoftware.community.browse.filter.helper;core-web-and-ui
+com.jivesoftware.community.browse.filter.task;core-web-and-ui
+com.jivesoftware.community.browse.impl;core-web-and-ui
+com.jivesoftware.community.browse.impl.cache;core-web-and-ui
+com.jivesoftware.community.browse.impl.mock;core-web-and-ui
+com.jivesoftware.community.browse.join;core-web-and-ui
+com.jivesoftware.community.browse.provider;core-web-and-ui
+com.jivesoftware.community.browse.proxy;core-web-and-ui
+com.jivesoftware.community.browse.rest;core-web-and-ui
+com.jivesoftware.community.browse.rest.impl;core-web-and-ui
+com.jivesoftware.community.browse.sort;core-web-and-ui
+com.jivesoftware.community.browse.sync;core-web-and-ui
+com.jivesoftware.community.browse.upgrade;core-web-and-ui
+com.jivesoftware.community.browse.util;core-web-and-ui
+com.jivesoftware.community.bulk;core-content
+com.jivesoftware.community.bulk.action;core-content
+com.jivesoftware.community.bulk.event;core-content
+com.jivesoftware.community.bulk.event.listener;core-content
+com.jivesoftware.community.bulk.event.processor;core-content
+com.jivesoftware.community.bulk.event.processor.util;core-content
+com.jivesoftware.community.bulk.impl;core-content
+com.jivesoftware.community.bulk.merge;core-content
+com.jivesoftware.community.bulk.proxy;core-content
+com.jivesoftware.community.bulkmanage.action;core-content
+com.jivesoftware.community.bulkmanage.link;core-content
+com.jivesoftware.community.bulkmanage.rest;core-content
+com.jivesoftware.community.bulkmanage.rest.model;core-content
+com.jivesoftware.community.cache;core-cache
+com.jivesoftware.community.cache.invalidation;core-cache
+com.jivesoftware.community.carousel.container;core-extension-points
+com.jivesoftware.community.carousel.container.dao;core-extension-points
+com.jivesoftware.community.carousel.container.dao.impl;core-extension-points
+com.jivesoftware.community.carousel.container.event;core-extension-points
+com.jivesoftware.community.carousel.container.impl;core-extension-points
+com.jivesoftware.community.carousel.container.objecttype;core-extension-points
+com.jivesoftware.community.carousel.container.proxy;core-extension-points
+com.jivesoftware.community.carousel.widget;core-extension-points
+com.jivesoftware.community.chrome.action;core-web-and-ui
+com.jivesoftware.community.chrome.region;core-web-and-ui
+com.jivesoftware.community.cloudalytics;core-analytics
+com.jivesoftware.community.cloudalytics.event;core-analytics
+com.jivesoftware.community.cloudalytics.event.impl;core-analytics
+com.jivesoftware.community.cloudalytics.export;core-analytics
+com.jivesoftware.community.cloudalytics.export.entity.hash;core-analytics
+com.jivesoftware.community.cloudalytics.export.filter;core-analytics
+com.jivesoftware.community.cloudalytics.export.filter.impl;core-analytics
+com.jivesoftware.community.cloudalytics.export.impl;core-analytics
+com.jivesoftware.community.cloudalytics.impl;core-analytics
+com.jivesoftware.community.cloudalytics.security.oauth;core-analytics
+com.jivesoftware.community.cloudalytics.security.oauth.model;core-analytics
+com.jivesoftware.community.cloudalytics.util;core-analytics
+com.jivesoftware.community.cloudnotifications;core-notification
+com.jivesoftware.community.cloudnotifications.rest;core-notification
+com.jivesoftware.community.cloudnotifications.rest.impl;core-notification
+com.jivesoftware.community.cloudnotifications.tenancy;core-notification
+com.jivesoftware.community.collection;core-notification
+com.jivesoftware.community.comments;core-content
+com.jivesoftware.community.comments.action;core-content
+com.jivesoftware.community.comments.dao;core-content
+com.jivesoftware.community.comments.events;core-content
+com.jivesoftware.community.comments.impl;core-content
+com.jivesoftware.community.comments.proxy;core-content
+com.jivesoftware.community.comments.rest;core-content
+com.jivesoftware.community.comments.rest.impl;core-content
+com.jivesoftware.community.comments.type;core-content
+com.jivesoftware.community.common.quest;core-content
+com.jivesoftware.community.connections.action;core-web-and-ui
+com.jivesoftware.community.content;core-content
+com.jivesoftware.community.content.action;core-content
+com.jivesoftware.community.content.action.beans;core-content
+com.jivesoftware.community.content.announcement;core-content
+com.jivesoftware.community.content.authorship;core-content
+com.jivesoftware.community.content.authorship.impl;core-content
+com.jivesoftware.community.content.banner;core-content
+com.jivesoftware.community.content.blogs;core-content
+com.jivesoftware.community.content.blogs.action;core-content
+com.jivesoftware.community.content.blogs.action.beans;core-content
+com.jivesoftware.community.content.blogs.rest;core-content
+com.jivesoftware.community.content.blogs.rest.beans;core-content
+com.jivesoftware.community.content.blogs.rest.impl;core-content
+com.jivesoftware.community.content.comment;core-content
+com.jivesoftware.community.content.comment.action;core-content
+com.jivesoftware.community.content.comment.action.beans;core-content
+com.jivesoftware.community.content.comment.rest;core-content
+com.jivesoftware.community.content.comment.rest.beans;core-content
+com.jivesoftware.community.content.comment.rest.impl;core-content
+com.jivesoftware.community.content.copy;core-content
+com.jivesoftware.community.content.copy.action;core-content
+com.jivesoftware.community.content.copy.directive;core-content
+com.jivesoftware.community.content.copy.impl;core-content
+com.jivesoftware.community.content.copy.rest;core-content
+com.jivesoftware.community.content.discussion;core-content
+com.jivesoftware.community.content.discussion.action;core-content
+com.jivesoftware.community.content.discussion.action.beans;core-content
+com.jivesoftware.community.content.discussion.rest;core-content
+com.jivesoftware.community.content.discussion.rest.beans;core-content
+com.jivesoftware.community.content.discussion.rest.impl;core-content
+com.jivesoftware.community.content.document;core-content
+com.jivesoftware.community.content.document.action;core-content
+com.jivesoftware.community.content.document.action.beans;core-content
+com.jivesoftware.community.content.document.impl;core-content
+com.jivesoftware.community.content.document.region;core-content
+com.jivesoftware.community.content.document.rest;core-content
+com.jivesoftware.community.content.document.rest.beans;core-content
+com.jivesoftware.community.content.document.rest.impl;core-content
+com.jivesoftware.community.content.draft;core-content
+com.jivesoftware.community.content.draft.dao;core-content
+com.jivesoftware.community.content.draft.event;core-content
+com.jivesoftware.community.content.draft.impl;core-content
+com.jivesoftware.community.content.draft.rest;core-content
+com.jivesoftware.community.content.draft.rest.beans;core-content
+com.jivesoftware.community.content.draft.rest.impl;core-content
+com.jivesoftware.community.content.image;core-content
+com.jivesoftware.community.content.moderation.impl;core-content
+com.jivesoftware.community.content.move;core-content
+com.jivesoftware.community.content.move.impl;core-content
+com.jivesoftware.community.content.multipart;core-content
+com.jivesoftware.community.content.multipart.rest;core-content
+com.jivesoftware.community.content.multipart.rest.beans;core-content
+com.jivesoftware.community.content.multipart.rest.impl;core-content
+com.jivesoftware.community.content.onbehalf;core-content
+com.jivesoftware.community.content.pdf;core-content
+com.jivesoftware.community.content.pdf.impl;core-content
+com.jivesoftware.community.content.photos;core-content
+com.jivesoftware.community.content.polls;core-content
+com.jivesoftware.community.content.polls.action;core-content
+com.jivesoftware.community.content.polls.action.beans;core-content
+com.jivesoftware.community.content.polls.dao;core-content
+com.jivesoftware.community.content.polls.dao.impl;core-content
+com.jivesoftware.community.content.polls.events;core-content
+com.jivesoftware.community.content.polls.helpers;core-content
+com.jivesoftware.community.content.polls.impl;core-content
+com.jivesoftware.community.content.polls.proxy;core-content
+com.jivesoftware.community.content.polls.rest;core-content
+com.jivesoftware.community.content.polls.rest.beans;core-content
+com.jivesoftware.community.content.polls.rest.impl;core-content
+com.jivesoftware.community.content.polls.struts.mapping;core-content
+com.jivesoftware.community.content.polls.type;core-content
+com.jivesoftware.community.content.polls.type.impl;core-content
+com.jivesoftware.community.content.publish;core-content
+com.jivesoftware.community.content.publish.banner;core-content
+com.jivesoftware.community.content.publish.collaboration;core-content
+com.jivesoftware.community.content.publish.collaboration.impl;core-content
+com.jivesoftware.community.content.publish.context;core-content
+com.jivesoftware.community.content.publish.context.impl;core-content
+com.jivesoftware.community.content.publish.impl;core-content
+com.jivesoftware.community.content.publish.visibility;core-content
+com.jivesoftware.community.content.region;core-content
+com.jivesoftware.community.content.region.body;core-content
+com.jivesoftware.community.content.region.linkedData;core-content
+com.jivesoftware.community.content.region.utils;core-content
+com.jivesoftware.community.content.relationships.places;core-content
+com.jivesoftware.community.content.relationships.places.browse;core-content
+com.jivesoftware.community.content.relationships.places.dao;core-content
+com.jivesoftware.community.content.relationships.places.dao.impl;core-content
+com.jivesoftware.community.content.relationships.places.event;core-content
+com.jivesoftware.community.content.relationships.places.event.listener;core-content
+com.jivesoftware.community.content.relationships.places.impl;core-content
+com.jivesoftware.community.content.relationships.places.objecttype;core-content
+com.jivesoftware.community.content.relationships.places.proxy;core-content
+com.jivesoftware.community.content.rest;core-content
+com.jivesoftware.community.content.rest.beans;core-content
+com.jivesoftware.community.content.slide;core-content
+com.jivesoftware.community.content.slide.action;core-content
+com.jivesoftware.community.content.slide.dao;core-content
+com.jivesoftware.community.content.slide.dao.impl;core-content
+com.jivesoftware.community.content.slide.impl;core-content
+com.jivesoftware.community.content.slide.objecttype;core-content
+com.jivesoftware.community.content.slide.proxy;core-content
+com.jivesoftware.community.content.threads;core-content
+com.jivesoftware.community.content.translation;core-content
+com.jivesoftware.community.content.translation.admin.action;core-content
+com.jivesoftware.community.content.translation.client;core-content
+com.jivesoftware.community.content.translation.client.api;core-content
+com.jivesoftware.community.content.translation.event.listener;core-content
+com.jivesoftware.community.content.translation.impl;core-content
+com.jivesoftware.community.content.type.impl;core-content
+com.jivesoftware.community.content.util;core-content
+com.jivesoftware.community.content.video.action;core-content
+com.jivesoftware.community.content.video.action.beans;core-content
+com.jivesoftware.community.content.video.rest;core-content
+com.jivesoftware.community.content.video.rest.beans;core-content
+com.jivesoftware.community.content.video.rest.impl;core-content
+com.jivesoftware.community.content.widget.askaquestion;core-content
+com.jivesoftware.community.content.widget.askaquestion.rest;core-content
+com.jivesoftware.community.content.widget.askaquestion.rest.beans;core-content
+com.jivesoftware.community.content.widget.askaquestion.rest.impl;core-content
+com.jivesoftware.community.content.widget.search;core-content
+com.jivesoftware.community.contentmeta;core-content
+com.jivesoftware.community.contentmeta.action;core-content
+com.jivesoftware.community.contentmeta.dao;core-content
+com.jivesoftware.community.contentmeta.dao.impl;core-content
+com.jivesoftware.community.contentmeta.impl;core-content
+com.jivesoftware.community.contentmeta.rest;core-content
+com.jivesoftware.community.contentmeta.rest.impl;core-content
+com.jivesoftware.community.contentmeta.type;core-content
+com.jivesoftware.community.custommetadata.admin;core-content
+com.jivesoftware.community.dao;core-data-access-layer
+com.jivesoftware.community.discussions.entitlements;core-authorization
+com.jivesoftware.community.discussions.objecttype;core-content
+com.jivesoftware.community.discussions.proxy;core-content
+com.jivesoftware.community.discussions.rest;core-content
+com.jivesoftware.community.discussions.rest.impl;core-content
+com.jivesoftware.community.document;core-content
+com.jivesoftware.community.document.provider;core-content
+com.jivesoftware.community.document.provider.impl;core-content
+com.jivesoftware.community.document.rest;core-api
+com.jivesoftware.community.document.rest.impl;core-api
+com.jivesoftware.community.dwr;core-content
+com.jivesoftware.community.eae;core-activity-stream
+com.jivesoftware.community.eae.action;core-activity-stream
+com.jivesoftware.community.eae.aop;core-activity-stream
+com.jivesoftware.community.eae.connection;core-activity-stream
+com.jivesoftware.community.eae.converters;core-activity-stream
+com.jivesoftware.community.eae.event;core-activity-stream
+com.jivesoftware.community.eae.event.handlers;core-activity-stream
+com.jivesoftware.community.eae.event.listeners;core-activity-stream
+com.jivesoftware.community.eae.follows;core-activity-stream
+com.jivesoftware.community.eae.follows.listeners;core-activity-stream
+com.jivesoftware.community.eae.hide;core-activity-stream
+com.jivesoftware.community.eae.hide.impl;core-activity-stream
+com.jivesoftware.community.eae.hide.proxy;core-activity-stream
+com.jivesoftware.community.eae.impl;core-activity-stream
+com.jivesoftware.community.eae.impl.cache;core-activity-stream
+com.jivesoftware.community.eae.ingress;core-activity-stream
+com.jivesoftware.community.eae.ingress.transformer;core-activity-stream
+com.jivesoftware.community.eae.integrationtemplate.type;core-activity-stream
+com.jivesoftware.community.eae.mail;core-activity-stream
+com.jivesoftware.community.eae.mail.dao;core-activity-stream
+com.jivesoftware.community.eae.mail.dao.impl;core-activity-stream
+com.jivesoftware.community.eae.mail.engagement;core-activity-stream
+com.jivesoftware.community.eae.mail.impl;core-activity-stream
+com.jivesoftware.community.eae.mail.proxy;core-activity-stream
+com.jivesoftware.community.eae.mail.recommender;core-activity-stream
+com.jivesoftware.community.eae.mail.recommender.request;core-activity-stream
+com.jivesoftware.community.eae.mail.recommender.result;core-activity-stream
+com.jivesoftware.community.eae.mail.task;core-activity-stream
+com.jivesoftware.community.eae.mail.util;core-activity-stream
+com.jivesoftware.community.eae.mail.valuecase;core-activity-stream
+com.jivesoftware.community.eae.messages;core-activity-stream
+com.jivesoftware.community.eae.messages.action;core-activity-stream
+com.jivesoftware.community.eae.messages.dao;core-activity-stream
+com.jivesoftware.community.eae.messages.impl;core-activity-stream
+com.jivesoftware.community.eae.messages.proxy;core-activity-stream
+com.jivesoftware.community.eae.messages.type;core-activity-stream
+com.jivesoftware.community.eae.objecttype;core-activity-stream
+com.jivesoftware.community.eae.proxy;core-activity-stream
+com.jivesoftware.community.eae.r2;core-activity-stream
+com.jivesoftware.community.eae.r2.api;core-activity-stream
+com.jivesoftware.community.eae.recommendation;core-activity-stream
+com.jivesoftware.community.eae.recommendation.dao;core-activity-stream
+com.jivesoftware.community.eae.recommendation.dao.impl;core-activity-stream
+com.jivesoftware.community.eae.recommendation.impl;core-activity-stream
+com.jivesoftware.community.eae.recommendation.impl.cache;core-activity-stream
+com.jivesoftware.community.eae.recommendation.proxy;core-activity-stream
+com.jivesoftware.community.eae.recommendation.rest.admin;core-activity-stream
+com.jivesoftware.community.eae.recommendation.rest.admin.impl;core-activity-stream
+com.jivesoftware.community.eae.rest;core-activity-stream
+com.jivesoftware.community.eae.rest.admin;core-activity-stream
+com.jivesoftware.community.eae.rest.impl;core-activity-stream
+com.jivesoftware.community.eae.shares;core-activity-stream
+com.jivesoftware.community.eae.shares.impl;core-activity-stream
+com.jivesoftware.community.eae.shares.impl.listener;core-activity-stream
+com.jivesoftware.community.eae.socket;core-activity-stream
+com.jivesoftware.community.eae.stats;core-activity-stream
+com.jivesoftware.community.eae.stats.jmx;core-activity-stream
+com.jivesoftware.community.eae.streams;core-activity-stream
+com.jivesoftware.community.eae.streams.impl;core-activity-stream
+com.jivesoftware.community.eae.streams.proxy;core-activity-stream
+com.jivesoftware.community.eae.streamtypes.notification;core-activity-stream
+com.jivesoftware.community.eae.tile;core-activity-stream
+com.jivesoftware.community.eae.tile.action;core-activity-stream
+com.jivesoftware.community.eae.tile.dao;core-activity-stream
+com.jivesoftware.community.eae.tile.impl;core-activity-stream
+com.jivesoftware.community.eae.tile.proxy;core-activity-stream
+com.jivesoftware.community.eae.tile.struts.mapping;core-activity-stream
+com.jivesoftware.community.eae.tile.type;core-activity-stream
+com.jivesoftware.community.eae.tile.util;core-activity-stream
+com.jivesoftware.community.eae.transformer;core-activity-stream
+com.jivesoftware.community.eae.upgrade;core-activity-stream
+com.jivesoftware.community.eae.upgrade.action.admin;core-activity-stream
+com.jivesoftware.community.eae.upgrade.admin;core-activity-stream
+com.jivesoftware.community.eae.upgrade.admin.impl;core-activity-stream
+com.jivesoftware.community.eae.upgrade.event;core-activity-stream
+com.jivesoftware.community.eae.upgrade.provider;core-activity-stream
+com.jivesoftware.community.eae.upgrade.tasks;core-activity-stream
+com.jivesoftware.community.eae.upgrade.tasks.taggedContent;core-activity-stream
+com.jivesoftware.community.eae.util;core-activity-stream
+com.jivesoftware.community.eae.view.action;core-activity-stream
+com.jivesoftware.community.eae.view.inbox;core-activity-stream
+com.jivesoftware.community.eae.view.recommendation;core-activity-stream
+com.jivesoftware.community.eae.view.stream;core-activity-stream
+com.jivesoftware.community.eae.view.stream.configuration;core-activity-stream
+com.jivesoftware.community.eae.view.stream.item;core-activity-stream
+com.jivesoftware.community.ediscovery;core-monitoring
+com.jivesoftware.community.ediscovery.action.admin;core-monitoring
+com.jivesoftware.community.ediscovery.dao;core-monitoring
+com.jivesoftware.community.ediscovery.impl;core-monitoring
+com.jivesoftware.community.ediscovery.output;core-monitoring
+com.jivesoftware.community.ediscovery.predicates;core-monitoring
+com.jivesoftware.community.ediscovery.providers;core-monitoring
+com.jivesoftware.community.ediscovery.proxy;core-monitoring
+com.jivesoftware.community.ediscovery.task;core-monitoring
+com.jivesoftware.community.ediscovery.webservice;core-monitoring
+com.jivesoftware.community.ediscovery.webservice.impl;core-monitoring
+com.jivesoftware.community.entitlements;core-authorization
+com.jivesoftware.community.entitlements.action;core-authorization
+com.jivesoftware.community.entitlements.action.include;core-authorization
+com.jivesoftware.community.entitlements.action.skin;core-authorization
+com.jivesoftware.community.entitlements.action.util;core-authorization
+com.jivesoftware.community.entitlements.action.views;core-authorization
+com.jivesoftware.community.entitlements.applied;core-authorization
+com.jivesoftware.community.entitlements.authorization;core-authorization
+com.jivesoftware.community.entitlements.container;core-authorization
+com.jivesoftware.community.entitlements.dao;core-authorization
+com.jivesoftware.community.entitlements.dao.impl;core-authorization
+com.jivesoftware.community.entitlements.events;core-authorization
+com.jivesoftware.community.entitlements.ext;core-authorization
+com.jivesoftware.community.entitlements.ext.impl;core-authorization
+com.jivesoftware.community.entitlements.impl;core-authorization
+com.jivesoftware.community.entitlements.impl.cache;core-authorization
+com.jivesoftware.community.entitlements.migration;core-authorization
+com.jivesoftware.community.entitlements.proxy;core-authorization
+com.jivesoftware.community.entitlements.proxy.impl;core-authorization
+com.jivesoftware.community.entitlements.type;core-authorization
+com.jivesoftware.community.entitlements.upgrade;core-authorization
+com.jivesoftware.community.entitlements.util;core-authorization
+com.jivesoftware.community.eos;core-storage-integration
+com.jivesoftware.community.eos.tasks;core-task-engine
+com.jivesoftware.community.error;core-api
+com.jivesoftware.community.error.event;core-api
+com.jivesoftware.community.error.filter;core-api
+com.jivesoftware.community.error.impl;core-api
+com.jivesoftware.community.event;core-lifecycle
+com.jivesoftware.community.event.browser;core-lifecycle
+com.jivesoftware.community.event.browser.impl;core-lifecycle
+com.jivesoftware.community.event.browser.rest;core-api
+com.jivesoftware.community.event.browser.view;core-web-and-ui
+com.jivesoftware.community.event.listener;core-lifecycle, core-notification
+com.jivesoftware.community.event.taskqueue;core-task-engine
+com.jivesoftware.community.event.taskqueue.impl;core-task-engine
+com.jivesoftware.community.expert;core-content
+com.jivesoftware.community.ext;core-content,core-extension-points
+com.jivesoftware.community.ext.dao;core-content,core-extension-points
+com.jivesoftware.community.ext.dao.impl;core-content,core-extension-points
+com.jivesoftware.community.ext.impl;core-content,core-extension-points
+com.jivesoftware.community.ext.util;core-content,core-extension-points
+com.jivesoftware.community.extactivity;core-activity-stream
+com.jivesoftware.community.extactivity.action;core-activity-stream
+com.jivesoftware.community.extactivity.attachment;core-activity-stream
+com.jivesoftware.community.extactivity.attachment.impl;core-activity-stream
+com.jivesoftware.community.extactivity.attachment.strategy;core-activity-stream
+com.jivesoftware.community.extactivity.dao;core-activity-stream
+com.jivesoftware.community.extactivity.dao.impl;core-activity-stream
+com.jivesoftware.community.extactivity.event;core-activity-stream
+com.jivesoftware.community.extactivity.filter;core-activity-stream
+com.jivesoftware.community.extactivity.generator;core-activity-stream
+com.jivesoftware.community.extactivity.i18n;core-activity-stream
+com.jivesoftware.community.extactivity.i18n.impl;core-activity-stream
+com.jivesoftware.community.extactivity.i18n.impl.cache;core-activity-stream
+com.jivesoftware.community.extactivity.impl;core-activity-stream
+com.jivesoftware.community.extactivity.rest;core-activity-stream
+com.jivesoftware.community.extactivity.rest.impl;core-activity-stream
+com.jivesoftware.community.extactivity.struts.mapping;core-activity-stream
+com.jivesoftware.community.extactivity.type;core-activity-stream
+com.jivesoftware.community.extactivity.type.contentmeta;core-activity-stream
+com.jivesoftware.community.extactivity.upgrade;core-activity-stream
+com.jivesoftware.community.extactivity.urn;core-activity-stream
+com.jivesoftware.community.extactivity.urn.impl;core-activity-stream
+com.jivesoftware.community.extactivity.verb;core-activity-stream
+com.jivesoftware.community.extactivity.verb.impl;core-activity-stream
+com.jivesoftware.community.extactivity.view;core-activity-stream
+com.jivesoftware.community.extactivity.view.identifer;core-activity-stream
+com.jivesoftware.community.extactivity.view.identifer.impl;core-activity-stream
+com.jivesoftware.community.extcomments;core-content
+com.jivesoftware.community.extcomments.upgrade;core-content
+com.jivesoftware.community.extendedinvitation;core-content
+com.jivesoftware.community.extendedinvitation.admin;core-content
+com.jivesoftware.community.extendedinvitation.dao;core-content
+com.jivesoftware.community.extendedinvitation.dao.impl;core-content
+com.jivesoftware.community.extendedinvitation.entitlements;core-content
+com.jivesoftware.community.extendedinvitation.event;core-content
+com.jivesoftware.community.extendedinvitation.impl;core-content
+com.jivesoftware.community.extendedinvitation.objecttype;core-content
+com.jivesoftware.community.extendedinvitation.upgrade;core-content
+com.jivesoftware.community.extension;core-extension-points
+com.jivesoftware.community.extension.dao;core-extension-points
+com.jivesoftware.community.extension.dao.impl;core-extension-points
+com.jivesoftware.community.extension.dao.upgrade;core-extension-points
+com.jivesoftware.community.extension.event;core-lifecycle
+com.jivesoftware.community.extension.filter;core-extension-points
+com.jivesoftware.community.extension.impl;core-extension-points
+com.jivesoftware.community.extension.objecttype;core-extension-points
+com.jivesoftware.community.extension.plugin;core-extension-points
+com.jivesoftware.community.extension.proxy;core-authorization
+com.jivesoftware.community.extension.publicdata;core-extension-points
+com.jivesoftware.community.extension.task;core-task-engine
+com.jivesoftware.community.extension.updater;core-extension-points
+com.jivesoftware.community.extension.updater.appliers;core-extension-points
+com.jivesoftware.community.extension.updater.dataobjects;core-extension-points
+com.jivesoftware.community.extension.updater.impl;core-extension-points
+com.jivesoftware.community.extension.upgrade;core-extension-points
+com.jivesoftware.community.extension.utils;core-extension-points
+com.jivesoftware.community.external;core-places
+com.jivesoftware.community.externalcollaboration;core-places
+com.jivesoftware.community.externalcollaboration.impl;core-places
+com.jivesoftware.community.externalcollaboration.proxy;core-places
+com.jivesoftware.community.extprops;core-content
+com.jivesoftware.community.extprops.dao;core-content
+com.jivesoftware.community.extprops.event;core-content
+com.jivesoftware.community.extprops.impl;core-content
+com.jivesoftware.community.extprops.objecttype;core-content
+com.jivesoftware.community.extprops.upgrade;core-content
+com.jivesoftware.community.favorites;core-content
+com.jivesoftware.community.favorites.action;core-content
+com.jivesoftware.community.favorites.action.ajax;core-content
+com.jivesoftware.community.favorites.action.util;core-content
+com.jivesoftware.community.favorites.authz;core-content, core-authorization
+com.jivesoftware.community.favorites.authz.impl;core-content, core-authorization
+com.jivesoftware.community.favorites.bridgebar;core-content
+com.jivesoftware.community.favorites.dao;core-content, core-data-access-layer
+com.jivesoftware.community.favorites.dao.impl;core-content, core-data-access-layer
+com.jivesoftware.community.favorites.events;core-lifecycle
+com.jivesoftware.community.favorites.external;core-content
+com.jivesoftware.community.favorites.external.impl;core-content
+com.jivesoftware.community.favorites.external.impl.cache;core-content
+com.jivesoftware.community.favorites.external.util;core-content
+com.jivesoftware.community.favorites.impl;core-content
+com.jivesoftware.community.favorites.impl.cache;core-content
+com.jivesoftware.community.favorites.moderation;core-content
+com.jivesoftware.community.favorites.rest;core-content, core-api
+com.jivesoftware.community.favorites.rest.impl;core-content, core-api
+com.jivesoftware.community.favorites.search;core-content, core-search
+com.jivesoftware.community.favorites.search.impl;core-content, core-search
+com.jivesoftware.community.favorites.struts;core-content
+com.jivesoftware.community.favorites.struts.impl;core-content
+com.jivesoftware.community.favorites.type;core-content
+com.jivesoftware.community.favorites.type.impl;core-content
+com.jivesoftware.community.favorites.util;core-content
+com.jivesoftware.community.featured;core-content
+com.jivesoftware.community.featured.impl;core-content
+com.jivesoftware.community.featured.impl.cache;core-content
+com.jivesoftware.community.featuretoggles;core-content
+com.jivesoftware.community.featuretoggles.impl;core-content
+com.jivesoftware.community.featuretoggles.mitui;core-content
+com.jivesoftware.community.feedback;core-content
+com.jivesoftware.community.feedback.impl;core-content
+com.jivesoftware.community.feedback.rest;core-content, core-api
+com.jivesoftware.community.feedback.rest.impl;core-content, core-api
+com.jivesoftware.community.field.validator;core-utility
+com.jivesoftware.community.follow.rest;core-activity-stream, core-api
+com.jivesoftware.community.follow.rest.impl;core-activity-stream, core-api
+com.jivesoftware.community.formattedtext;core-web-and-ui
+com.jivesoftware.community.formattedtext.dao;core-web-and-ui
+com.jivesoftware.community.formattedtext.dao.impl;core-web-and-ui
+com.jivesoftware.community.formattedtext.impl;core-web-and-ui
+com.jivesoftware.community.formattedtext.proxy;core-web-and-ui, core-authorization
+com.jivesoftware.community.formattedtext.type;core-web-and-ui
+com.jivesoftware.community.gala;core-extension-points, core-web-and-ui, core-api
+com.jivesoftware.community.gala.entities;core-extension-points, core-web-and-ui
+com.jivesoftware.community.gala.impl;core-extension-points, core-web-and-ui
+com.jivesoftware.community.gco;core-content
+com.jivesoftware.community.gco.entities;core-content
+com.jivesoftware.community.gco.impl;core-content
+com.jivesoftware.community.graveyard;core-content
+com.jivesoftware.community.graveyard.dao;core-content
+com.jivesoftware.community.graveyard.dao.impl;core-content
+com.jivesoftware.community.graveyard.event;core-content
+com.jivesoftware.community.graveyard.filter;core-content
+com.jivesoftware.community.graveyard.impl;core-content
+com.jivesoftware.community.graveyard.task;core-content
+com.jivesoftware.community.groups.action;core-user-management, core-web-and-ui
+com.jivesoftware.community.groups.action.views;core-user-management, core-web-and-ui
+com.jivesoftware.community.groups.populator;core-user-management, core-web-and-ui
+com.jivesoftware.community.groups.rest;core-user-management, core-api
+com.jivesoftware.community.groups.rest.impl;core-user-management, core-api
+com.jivesoftware.community.groups.suggest;core-user-management
+com.jivesoftware.community.help;core-web-and-ui
+com.jivesoftware.community.help.action;core-web-and-ui
+com.jivesoftware.community.history;core-activity-stream
+com.jivesoftware.community.http;core-connectivity
+com.jivesoftware.community.http.impl;core-connectivity
+com.jivesoftware.community.i18n;core-i18n, core-web-and-ui
+com.jivesoftware.community.identity.client.http;core-connectivity
+com.jivesoftware.community.image;core-content, core-web-and-ui, core-authorization
+com.jivesoftware.community.image.exif;core-content
+com.jivesoftware.community.image.fetcher;core-content
+com.jivesoftware.community.image.rest;core-content, core-api
+com.jivesoftware.community.image.rest.impl;core-content, core-api
+com.jivesoftware.community.image.thumbnailer;core-content
+com.jivesoftware.community.image.type;core-content
+com.jivesoftware.community.impl;core-content, core-audit, core-web-and-ui, core-utility, core-authorization, core-cache, core-lifecycle
+com.jivesoftware.community.impl.abuse;core-moderation
+com.jivesoftware.community.impl.activity;core-activity-stream
+com.jivesoftware.community.impl.announcement;core-content, core-notification
+com.jivesoftware.community.impl.attachment;core-content
+com.jivesoftware.community.impl.binarybody;core-content
+com.jivesoftware.community.impl.blog;core-content
+com.jivesoftware.community.impl.cache;core-content
+com.jivesoftware.community.impl.comment;core-content
+com.jivesoftware.community.impl.community;core-content
+com.jivesoftware.community.impl.container;core-places
+com.jivesoftware.community.impl.dao;core-data-access-layer, core-content
+com.jivesoftware.community.impl.dao.sql;core-data-access-layer
+com.jivesoftware.community.impl.document;core-content
+com.jivesoftware.community.impl.link;core-content
+com.jivesoftware.community.impl.message;core-content
+com.jivesoftware.community.impl.message.count;core-content
+com.jivesoftware.community.impl.message.subject;core-content
+com.jivesoftware.community.impl.perms;core-authorization
+com.jivesoftware.community.impl.querycore-cache;core-cache
+com.jivesoftware.community.impl.querycache;core-cache
+com.jivesoftware.community.impl.question;core-content
+com.jivesoftware.community.impl.registration;core-moderation
+com.jivesoftware.community.impl.render;core-web-and-ui
+com.jivesoftware.community.impl.search;core-search, core-task-engine
+com.jivesoftware.community.impl.search.provider;core-search, core-data-access-layer
+com.jivesoftware.community.impl.search.provider.filter;core-search
+com.jivesoftware.community.impl.search.provider.util;core-search, core-data-access-layer
+com.jivesoftware.community.impl.search.proxy;core-search, core-authorization
+com.jivesoftware.community.impl.search.signal;core-search, core-data-access-layer
+com.jivesoftware.community.impl.search.transformer;core-search
+com.jivesoftware.community.impl.search.transformer.provider;core-search
+com.jivesoftware.community.impl.search.user;core-search, core-data-access-layer, core-user-management
+com.jivesoftware.community.impl.search.user.base;core-search, core-user-management
+com.jivesoftware.community.impl.search.user.cloud;core-search
+com.jivesoftware.community.impl.search.user.elasticsearch;core-search
+com.jivesoftware.community.impl.search.user.proxy;core-search
+com.jivesoftware.community.impl.status;core-content
+com.jivesoftware.community.impl.tag;core-content
+com.jivesoftware.community.impl.tagset;core-content
+com.jivesoftware.community.impl.temp;core-content
+com.jivesoftware.community.impl.theme;core-content
+com.jivesoftware.community.impl.user;core-task-engine
+com.jivesoftware.community.inbox;core-notification
+com.jivesoftware.community.inbox.category;core-notification
+com.jivesoftware.community.inbox.converter;core-notification, core-web-and-ui
+com.jivesoftware.community.inbox.dao;core-notification
+com.jivesoftware.community.inbox.dao.impl;core-notification
+com.jivesoftware.community.inbox.entry;core-notification
+com.jivesoftware.community.inbox.event;core-notification
+com.jivesoftware.community.inbox.event.newfeatureinfoproviders;core-notification
+com.jivesoftware.community.inbox.event.newfeatureinfoproviders.universal;core-notification
+com.jivesoftware.community.inbox.impl;core-notification
+com.jivesoftware.community.inbox.upgrade;core-notification
+com.jivesoftware.community.inbox.util;core-notification
+com.jivesoftware.community.integration;core-integrations
+com.jivesoftware.community.integration.adaptor;core-integrations
+com.jivesoftware.community.integration.adaptor.impl;core-integrations
+com.jivesoftware.community.integration.adaptor.jab;core-integrations
+com.jivesoftware.community.integration.refresh;core-integrations
+com.jivesoftware.community.integration.rest;core-integrations
+com.jivesoftware.community.integration.storage;core-storage-integration
+com.jivesoftware.community.integration.storage.api;core-storage-integration
+com.jivesoftware.community.integration.storage.cache;core-storage-integration
+com.jivesoftware.community.integration.storage.comments;core-storage-integration
+com.jivesoftware.community.integration.storage.comments.dao;core-storage-integration
+com.jivesoftware.community.integration.storage.comments.events;core-storage-integration
+com.jivesoftware.community.integration.storage.comments.impl;core-storage-integration
+com.jivesoftware.community.integration.storage.comments.objecttype;core-storage-integration
+com.jivesoftware.community.integration.storage.container;core-storage-integration
+com.jivesoftware.community.integration.storage.container.dao;core-storage-integration
+com.jivesoftware.community.integration.storage.container.impl;core-storage-integration
+com.jivesoftware.community.integration.storage.container.objecttype;core-storage-integration
+com.jivesoftware.community.integration.storage.conversion;core-storage-integration
+com.jivesoftware.community.integration.storage.definition;core-storage-integration
+com.jivesoftware.community.integration.storage.definition.dao;core-storage-integration
+com.jivesoftware.community.integration.storage.definition.impl;core-storage-integration
+com.jivesoftware.community.integration.storage.definition.objecttype;core-storage-integration
+com.jivesoftware.community.integration.storage.event;core-storage-integration
+com.jivesoftware.community.integration.storage.exceptions;core-storage-integration
+com.jivesoftware.community.integration.storage.extensions;core-storage-integration
+com.jivesoftware.community.integration.storage.file;core-storage-integration
+com.jivesoftware.community.integration.storage.file.dao;core-storage-integration
+com.jivesoftware.community.integration.storage.file.filters;core-storage-integration
+com.jivesoftware.community.integration.storage.file.impl;core-storage-integration
+com.jivesoftware.community.integration.storage.file.impl.move;core-storage-integration
+com.jivesoftware.community.integration.storage.file.objecttype;core-storage-integration
+com.jivesoftware.community.integration.storage.fileVersion;core-storage-integration
+com.jivesoftware.community.integration.storage.fileVersion.dao;core-storage-integration
+com.jivesoftware.community.integration.storage.fileVersion.impl;core-storage-integration
+com.jivesoftware.community.integration.storage.fileVersion.objecttype;core-storage-integration
+com.jivesoftware.community.integration.storage.impersonation;core-storage-integration
+com.jivesoftware.community.integration.storage.instance;core-storage-integration
+com.jivesoftware.community.integration.storage.instance.dao;core-storage-integration
+com.jivesoftware.community.integration.storage.instance.impl;core-storage-integration
+com.jivesoftware.community.integration.storage.instance.objecttype;core-storage-integration
+com.jivesoftware.community.integration.storage.listeners;core-storage-integration
+com.jivesoftware.community.integration.storage.managers;core-storage-integration
+com.jivesoftware.community.integration.storage.members;core-storage-integration
+com.jivesoftware.community.integration.storage.members.dao;core-storage-integration
+com.jivesoftware.community.integration.storage.members.impl;core-storage-integration
+com.jivesoftware.community.integration.storage.members.objecttype;core-storage-integration
+com.jivesoftware.community.integration.storage.members.retrievers;core-storage-integration
+com.jivesoftware.community.integration.storage.members.retrievers.impl;core-storage-integration
+com.jivesoftware.community.integration.storage.members.update;core-storage-integration
+com.jivesoftware.community.integration.storage.members.util;core-storage-integration
+com.jivesoftware.community.integration.storage.models;core-storage-integration
+com.jivesoftware.community.integration.storage.resources;core-storage-integration
+com.jivesoftware.community.integration.storage.resources.dao;core-storage-integration
+com.jivesoftware.community.integration.storage.resources.events;core-storage-integration
+com.jivesoftware.community.integration.storage.resources.impl;core-storage-integration
+com.jivesoftware.community.integration.storage.rest.impl;core-storage-integration
+com.jivesoftware.community.integration.storage.staticitem;core-storage-integration
+com.jivesoftware.community.integration.storage.staticitem.attachment;core-storage-integration
+com.jivesoftware.community.integration.storage.staticitem.attachment.dao;core-storage-integration
+com.jivesoftware.community.integration.storage.staticitem.attachment.impl;core-storage-integration
+com.jivesoftware.community.integration.storage.staticitem.attachment.objecttype;core-storage-integration
+com.jivesoftware.community.integration.storage.staticitem.dao;core-storage-integration
+com.jivesoftware.community.integration.storage.staticitem.preview;core-storage-integration
+com.jivesoftware.community.integration.storage.staticitem.preview.dao;core-storage-integration
+com.jivesoftware.community.integration.storage.staticitem.preview.impl;core-storage-integration
+com.jivesoftware.community.integration.storage.staticitem.preview.objecttype;core-storage-integration
+com.jivesoftware.community.integration.storage.ui;core-storage-integration
+com.jivesoftware.community.integration.storage.usermapping;core-storage-integration
+com.jivesoftware.community.integration.storage.usermapping.dao;core-storage-integration
+com.jivesoftware.community.integration.storage.usermapping.impl;core-storage-integration
+com.jivesoftware.community.integration.storage.utils;core-storage-integration
+com.jivesoftware.community.integration.stream;core-activity-stream, core-integrations
+com.jivesoftware.community.integration.style;core-integrations
+com.jivesoftware.community.integration.synthetic.app;core-integrations
+com.jivesoftware.community.integration.synthetic.app.impl;core-integrations
+com.jivesoftware.community.integration.template;core-integrations
+com.jivesoftware.community.integration.template.event;core-integrations
+com.jivesoftware.community.integration.template.objecttype;core-integrations
+com.jivesoftware.community.integration.templatecategory;core-integrations
+com.jivesoftware.community.integration.templatecategory.event;core-integrations
+com.jivesoftware.community.integration.templatecategory.objecttype;core-integrations
+com.jivesoftware.community.integration.tile;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tile.dao;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tile.event;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tile.extprops;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tile.impl;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tile.objecttype;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tile.transformation;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tilecategory;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tilecategory.cache;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tilecategory.event;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tilecategory.objecttype;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tileinstance;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tileinstance.dao;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tileinstance.event;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tileinstance.impl;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tileinstance.objecttype;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tileinstance.status;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tileinstance.task;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tileinstance.type;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tileinstance.util;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tilepage;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tilepage.admin;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tilepage.dao;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tilepage.event;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tilepage.exception;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tilepage.impl;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tilepage.impl.cache;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tilepage.objecttype;core-integrations, core-extension-points
+com.jivesoftware.community.integration.tilepage.proxy;core-integrations, core-extension-points
+com.jivesoftware.community.integration.transform;core-integrations
+com.jivesoftware.community.integration.upgrade;core-integrations
+com.jivesoftware.community.integration.upgrade.service;core-integrations
+com.jivesoftware.community.integration.upgrade.storage;core-integrations
+com.jivesoftware.community.integration.validation;core-integrations
+com.jivesoftware.community.interceptor;core-integrations, core-moderation
+com.jivesoftware.community.interceptor.util;core-moderation
+com.jivesoftware.community.internal;core-content
+com.jivesoftware.community.invitation;core-content, core-places
+com.jivesoftware.community.invitation.dao;core-content, core-places
+com.jivesoftware.community.invitation.dao.impl;core-content, core-places
+com.jivesoftware.community.invitation.dwr;core-content, core-places
+com.jivesoftware.community.invitation.impl;core-content, core-places
+com.jivesoftware.community.invitation.impl.cache;core-content, core-places
+com.jivesoftware.community.invitation.objecttype;core-content, core-places
+com.jivesoftware.community.invitation.proxy;core-content, core-places, core-authorization
+com.jivesoftware.community.invitation.rest;core-content, core-places, core-api
+com.jivesoftware.community.invitation.rest.impl;core-content, core-places, core-api
+com.jivesoftware.community.invitation.ui;core-content, core-places, core-web-and-ui
+com.jivesoftware.community.labels;core-web-and-ui
+com.jivesoftware.community.labels.actions.ajax;core-web-and-ui
+com.jivesoftware.community.labels.dao;core-web-and-ui
+com.jivesoftware.community.labels.dao.impl;core-web-and-ui
+com.jivesoftware.community.labels.event;core-web-and-ui
+com.jivesoftware.community.labels.impl;core-web-and-ui
+com.jivesoftware.community.labels.proxy;core-web-and-ui, core-authorization
+com.jivesoftware.community.labels.util;core-web-and-ui
+com.jivesoftware.community.license;core-authorization
+com.jivesoftware.community.license.annotations;core-authorization
+com.jivesoftware.community.lifecycle;core-lifecycle
+com.jivesoftware.community.lifecycle.configuration;core-lifecycle
+com.jivesoftware.community.lifecycle.spring;core-lifecycle
+com.jivesoftware.community.lifecycle.spring.impl;core-lifecycle
+com.jivesoftware.community.lifecycle.spring.task;core-lifecycle, core-task-engine
+com.jivesoftware.community.lifecycle.struts;core-lifecycle
+com.jivesoftware.community.mail;core-notification
+com.jivesoftware.community.mail.action;core-notification
+com.jivesoftware.community.mail.beans;core-notification
+com.jivesoftware.community.mail.beans.trial;core-notification
+com.jivesoftware.community.mail.dao;core-notification
+com.jivesoftware.community.mail.dao.impl;core-notification
+com.jivesoftware.community.mail.event;core-notification
+com.jivesoftware.community.mail.filters;core-notification
+com.jivesoftware.community.mail.helper;core-notification
+com.jivesoftware.community.mail.impl;core-notification
+com.jivesoftware.community.mail.incoming;core-content
+com.jivesoftware.community.mail.incoming.impl;core-content
+com.jivesoftware.community.mail.incoming.processors;core-content
+com.jivesoftware.community.mail.incoming.processors.create;core-content
+com.jivesoftware.community.mail.incoming.processors.reply;core-content
+com.jivesoftware.community.mail.jmx;core-notification
+com.jivesoftware.community.mail.objecttype;core-notification
+com.jivesoftware.community.mail.outgoing;core-notification
+com.jivesoftware.community.mail.outgoing.processor;core-notification
+com.jivesoftware.community.mail.outgoing.processor.pre;core-notification
+com.jivesoftware.community.mail.proxy;core-notification, core-authorization
+com.jivesoftware.community.mail.spi;core-notification
+com.jivesoftware.community.mail.token;core-notification
+com.jivesoftware.community.mail.util;core-notification
+com.jivesoftware.community.mako;core-connectivity
+com.jivesoftware.community.mediacollections;core-content
+com.jivesoftware.community.mediacollections.impl;core-content
+com.jivesoftware.community.mediacollections.rest.v2;core-content
+com.jivesoftware.community.mention;core-content
+com.jivesoftware.community.mention.event;core-content
+com.jivesoftware.community.mention.impl;core-notification, core-task-engine, core-content
+com.jivesoftware.community.message;core-content
+com.jivesoftware.community.metadata;core-content
+com.jivesoftware.community.metadata.config;core-content
+com.jivesoftware.community.metadata.dao;core-content
+com.jivesoftware.community.metadata.listener;core-content
+com.jivesoftware.community.metadata.manager;core-content
+com.jivesoftware.community.metric.rest;core-monitoring, core-api
+com.jivesoftware.community.metric.rest.impl;core-monitoring
+com.jivesoftware.community.microblogging;core-content
+com.jivesoftware.community.microblogging.action;core-content
+com.jivesoftware.community.microblogging.action.admin;core-content
+com.jivesoftware.community.microblogging.action.feeds;core-content
+com.jivesoftware.community.microblogging.impl;core-content
+com.jivesoftware.community.microblogging.rest;core-content, core-api
+com.jivesoftware.community.microblogging.rest.impl;core-content, core-api
+com.jivesoftware.community.microblogging.struts.mapping;core-content
+com.jivesoftware.community.microblogging.task;core-content, core-task-engine
+com.jivesoftware.community.microblogging.type;core-content
+com.jivesoftware.community.microblogging.type.contentmeta;core-content
+com.jivesoftware.community.microblogging.upgrade;core-content
+com.jivesoftware.community.microblogging.util;core-content
+com.jivesoftware.community.migration;core-data-access-layer
+com.jivesoftware.community.mobile;core-mobile
+com.jivesoftware.community.mobile.apps;core-mobile
+com.jivesoftware.community.mobile.push;core-mobile, core-notification
+com.jivesoftware.community.mobile.push.activity;core-mobile, core-notification
+com.jivesoftware.community.mobile.push.activity.cache;core-mobile, core-notification
+com.jivesoftware.community.mobile.push.common;core-mobile, core-notification
+com.jivesoftware.community.mobile.push.dao;core-mobile, core-notification
+com.jivesoftware.community.mobile.push.mode;core-mobile, core-notification
+com.jivesoftware.community.mobile.push.mode.custom;core-mobile, core-notification
+com.jivesoftware.community.mobile.push.mode.custom.dao;core-mobile, core-notification
+com.jivesoftware.community.mobile.push.mode.standard;core-mobile, core-notification
+com.jivesoftware.community.mobile.push.mode.standard.converters;core-mobile, core-notification
+com.jivesoftware.community.mobile.push.moderation;core-mobile, core-notification
+com.jivesoftware.community.mobile.push.processing;core-mobile, core-notification
+com.jivesoftware.community.mobile.push.registration;core-mobile, core-notification
+com.jivesoftware.community.mobile.push.registration.api;core-mobile, core-notification
+com.jivesoftware.community.mobile.quest;core-mobile
+com.jivesoftware.community.mobile.redirector;core-mobile
+com.jivesoftware.community.moderation;core-moderation, core-integrations
+com.jivesoftware.community.moderation.event;core-moderation, core-integrations
+com.jivesoftware.community.moderation.externalIntegration;core-moderation, core-integrations
+com.jivesoftware.community.moderation.externalIntegration.action;core-moderation, core-integrations
+com.jivesoftware.community.moderation.externalIntegration.cache;core-moderation, core-integrations
+com.jivesoftware.community.moderation.externalIntegration.dao;core-moderation, core-integrations
+com.jivesoftware.community.moderation.externalIntegration.listener;core-moderation, core-integrations
+com.jivesoftware.community.moderation.externalIntegration.Serialization;core-moderation, core-integrations
+com.jivesoftware.community.moderation.externalIntegration.tenancy;core-moderation, core-integrations
+com.jivesoftware.community.moderation.impl;core-moderation, core-integrations
+com.jivesoftware.community.moderation.interceptors;core-moderation, core-integrations
+com.jivesoftware.community.moderation.link;core-moderation, core-integrations
+com.jivesoftware.community.moderation.link.action;core-moderation, core-integrations
+com.jivesoftware.community.moderation.link.dao;core-moderation, core-integrations
+com.jivesoftware.community.moderation.link.impl;core-moderation, core-integrations
+com.jivesoftware.community.moderation.link.listener;core-moderation, core-integrations
+com.jivesoftware.community.moderation.link.proxy;core-moderation, core-integrations
+com.jivesoftware.community.moderation.link.task;core-moderation, core-integrations
+com.jivesoftware.community.moderation.link.upgrade;core-moderation, core-integrations
+com.jivesoftware.community.moderation.link.util;core-integrations
+com.jivesoftware.community.navbar;core-web-and-ui
+com.jivesoftware.community.navbar.impl;core-web-and-ui
+com.jivesoftware.community.navbar.rest;core-web-and-ui, core-api
+com.jivesoftware.community.navbar.rest.impl;core-web-and-ui, core-api
+com.jivesoftware.community.news;core-activity-stream
+com.jivesoftware.community.news.backend.association;core-activity-stream
+com.jivesoftware.community.news.backend.listeners;core-activity-stream
+com.jivesoftware.community.news.backend.listeners.processors;core-activity-stream
+com.jivesoftware.community.news.backend.publication;core-activity-stream
+com.jivesoftware.community.news.backend.publication.exception;core-activity-stream
+com.jivesoftware.community.news.backend.subscriber;core-activity-stream
+com.jivesoftware.community.news.backend.subscription;core-activity-stream
+com.jivesoftware.community.news.backend.subscription.exception;core-activity-stream
+com.jivesoftware.community.news.backend.util;core-activity-stream
+com.jivesoftware.community.news.edit;core-activity-stream
+com.jivesoftware.community.news.edit.beans;core-activity-stream
+com.jivesoftware.community.news.edit.util;core-activity-stream
+com.jivesoftware.community.news.stream;core-activity-stream
+com.jivesoftware.community.notification;core-notification
+com.jivesoftware.community.notification.backend;core-notification
+com.jivesoftware.community.oauth;core-authentication, core-authorization
+com.jivesoftware.community.oauth.dao;core-authentication, core-authorization
+com.jivesoftware.community.oauth.dao.impl;core-authentication, core-authorization
+com.jivesoftware.community.oauth.event;core-authentication, core-authorization
+com.jivesoftware.community.oauth.filter;core-authentication, core-authorization
+com.jivesoftware.community.oauth.impl;core-authentication, core-authorization
+com.jivesoftware.community.oauth.mobile;core-authentication, core-authorization, core-mobile
+com.jivesoftware.community.oauth.mobile.action;core-authentication, core-authorization, core-mobile
+com.jivesoftware.community.oauth.mobile.api;core-authentication, core-authorization, core-mobile
+com.jivesoftware.community.oauth.mobile.event;core-authentication, core-authorization, core-mobile
+com.jivesoftware.community.oauth.realtime;core-authentication, core-authorization
+com.jivesoftware.community.oauth.realtime.api;core-authentication, core-authorization
+com.jivesoftware.community.oauth.rest;core-authentication, core-authorization, core-api
+com.jivesoftware.community.oauth.session;core-authentication, core-authorization
+com.jivesoftware.community.oauth.spring;core-authentication, core-authorization
+com.jivesoftware.community.oauth.task;core-authentication, core-authorization, core-task-engine
+com.jivesoftware.community.oauth.type;core-authentication, core-authorization
+com.jivesoftware.community.oauth.upgrade;core-authentication, core-authorization
+com.jivesoftware.community.oauth.view;core-authentication, core-authorization
+com.jivesoftware.community.oauth2;core-authentication, core-authorization
+com.jivesoftware.community.oauth2.action;core-authentication, core-authorization
+com.jivesoftware.community.oauth2.dao;core-authentication, core-authorization, core-data-access-layer
+com.jivesoftware.community.oauth2.event;core-authentication, core-authorization
+com.jivesoftware.community.oauth2.filter;core-authentication, core-authorization
+com.jivesoftware.community.oauth2.manager;core-authentication, core-authorization
+com.jivesoftware.community.oauth2.type;core-authentication, core-authorization
+com.jivesoftware.community.oauth2.upgrade;core-authentication, core-authorization, core-data-access-layer
+com.jivesoftware.community.oauth2.validators;core-authentication, core-authorization
+com.jivesoftware.community.objectrel;core-authorization
+com.jivesoftware.community.objectrel.impl;core-authorization
+com.jivesoftware.community.objecttype;core-content
+com.jivesoftware.community.objecttype.archive;core-content
+com.jivesoftware.community.objecttype.archive.impl;core-content
+com.jivesoftware.community.objecttype.ext;core-content
+com.jivesoftware.community.objecttype.ext.events;core-content
+com.jivesoftware.community.objecttype.ext.impl;core-content
+com.jivesoftware.community.objecttype.impl;core-content
+com.jivesoftware.community.objecttype.permission;core-content
+com.jivesoftware.community.objecttype.rest;core-content, core-api
+com.jivesoftware.community.objecttype.rest.impl;core-content, core-api
+com.jivesoftware.community.objecttype.util;core-utility
+com.jivesoftware.community.onboarding;core-content
+com.jivesoftware.community.onboarding.action;core-content
+com.jivesoftware.community.onboarding.impl;core-content
+com.jivesoftware.community.onboarding.listener;core-content
+com.jivesoftware.community.onboarding.proxy;core-content
+com.jivesoftware.community.onboarding.quest;core-content
+com.jivesoftware.community.onboarding.rest;core-content, core-api
+com.jivesoftware.community.onboarding.rest.impl;core-content, core-api
+com.jivesoftware.community.onboarding.view;core-content
+com.jivesoftware.community.opensocial;core-integrations
+com.jivesoftware.community.opensocial.aaa;core-integrations
+com.jivesoftware.community.opensocial.aaa.impl;core-integrations
+com.jivesoftware.community.opensocial.cache;core-integrations
+com.jivesoftware.community.opensocial.dao;core-integrations
+com.jivesoftware.community.opensocial.dao.impl;core-integrations
+com.jivesoftware.community.opensocial.dao.upgrade;core-integrations
+com.jivesoftware.community.opensocial.events;core-integrations
+com.jivesoftware.community.opensocial.expressions;core-integrations
+com.jivesoftware.community.opensocial.ext;core-integrations
+com.jivesoftware.community.opensocial.ext.model;core-integrations
+com.jivesoftware.community.opensocial.ext.model.impl;core-integrations
+com.jivesoftware.community.opensocial.ext.service;core-integrations
+com.jivesoftware.community.opensocial.ext.spi;core-integrations
+com.jivesoftware.community.opensocial.filter;core-integrations
+com.jivesoftware.community.opensocial.gadgets;core-integrations
+com.jivesoftware.community.opensocial.gadgets.config;core-integrations
+com.jivesoftware.community.opensocial.gadgets.dao.upgrade;core-integrations
+com.jivesoftware.community.opensocial.gadgets.events;core-integrations
+com.jivesoftware.community.opensocial.gadgets.features;core-integrations
+com.jivesoftware.community.opensocial.gadgets.http;core-integrations
+com.jivesoftware.community.opensocial.gadgets.impl;core-integrations
+com.jivesoftware.community.opensocial.gadgets.render;core-integrations
+com.jivesoftware.community.opensocial.gadgets.resources;core-integrations
+com.jivesoftware.community.opensocial.gadgets.rewrite;core-integrations
+com.jivesoftware.community.opensocial.gadgets.rewrite.js;core-integrations
+com.jivesoftware.community.opensocial.gadgets.servlet;core-integrations
+com.jivesoftware.community.opensocial.gadgets.uri;core-integrations
+com.jivesoftware.community.opensocial.handler;core-integrations
+com.jivesoftware.community.opensocial.impl;core-integrations
+com.jivesoftware.community.opensocial.manager;core-integrations
+com.jivesoftware.community.opensocial.manager.impl;core-integrations
+com.jivesoftware.community.opensocial.model;core-integrations
+com.jivesoftware.community.opensocial.model.impl;core-integrations
+com.jivesoftware.community.opensocial.oauth;core-integrations
+com.jivesoftware.community.opensocial.oauth.impl;core-integrations
+com.jivesoftware.community.opensocial.oauth2;core-integrations
+com.jivesoftware.community.opensocial.properties;core-integrations
+com.jivesoftware.community.opensocial.rest;core-integrations
+com.jivesoftware.community.opensocial.rest.impl;core-integrations
+com.jivesoftware.community.opensocial.services;core-integrations
+com.jivesoftware.community.opensocial.type;core-integrations
+com.jivesoftware.community.opensocial.util;core-integrations
+com.jivesoftware.community.outcome;core-content
+com.jivesoftware.community.outcome.admin;core-content, core-administration
+com.jivesoftware.community.outcome.admin.webservice;core-content, core-administration
+com.jivesoftware.community.outcome.admin.webservice.impl;core-content, core-administration
+com.jivesoftware.community.outcome.dao;core-content
+com.jivesoftware.community.outcome.dao.impl;core-content
+com.jivesoftware.community.outcome.event;core-content
+com.jivesoftware.community.outcome.event.listener;core-content
+com.jivesoftware.community.outcome.impl;core-content
+com.jivesoftware.community.outcome.impl.type.entitlement;core-content
+com.jivesoftware.community.outcome.impl.type.listener;core-content
+com.jivesoftware.community.outcome.impl.type.propertyconverter;core-content
+com.jivesoftware.community.outcome.impl.type.provider;core-content
+com.jivesoftware.community.outcome.objecttype;core-content
+com.jivesoftware.community.outcome.proxy;core-content
+com.jivesoftware.community.outcome.view;core-content
+com.jivesoftware.community.outcome.view.util;core-content
+com.jivesoftware.community.palette;core-web-and-ui
+com.jivesoftware.community.palette.action;core-web-and-ui
+com.jivesoftware.community.palette.dao;core-web-and-ui
+com.jivesoftware.community.palette.json;core-web-and-ui
+com.jivesoftware.community.palette.upgrade;core-web-and-ui
+com.jivesoftware.community.partner;core-authorization
+com.jivesoftware.community.phrasesubstitution;core-moderation
+com.jivesoftware.community.phrasesubstitution.ms;core-moderation
+com.jivesoftware.community.places;core-places
+com.jivesoftware.community.places.action;core-places
+com.jivesoftware.community.places.admin;core-places, core-administration
+com.jivesoftware.community.places.edit;core-places
+com.jivesoftware.community.places.errorPropagation;core-places
+com.jivesoftware.community.places.header;core-places
+com.jivesoftware.community.places.impl;core-places
+com.jivesoftware.community.places.proxy;core-places, core-authorization
+com.jivesoftware.community.places.rest;core-places, core-api
+com.jivesoftware.community.places.rest.impl;core-places, core-api
+com.jivesoftware.community.places.tab;core-places
+com.jivesoftware.community.places.tab.dao;core-places
+com.jivesoftware.community.places.tab.manager;core-places
+com.jivesoftware.community.places.type;core-places
+com.jivesoftware.community.places.util;core-places
+com.jivesoftware.community.playbox;core-gamification
+com.jivesoftware.community.playbox.actions;core-gamification
+com.jivesoftware.community.playbox.region;core-gamification
+com.jivesoftware.community.plugin.ext;core-extension-points
+com.jivesoftware.community.presence;core-notification
+com.jivesoftware.community.presence.impl;core-notification
+com.jivesoftware.community.privateprops;core-lifecycle
+com.jivesoftware.community.privateprops.dao;core-lifecycle
+com.jivesoftware.community.privateprops.event;core-lifecycle
+com.jivesoftware.community.privateprops.impl;core-lifecycle
+com.jivesoftware.community.privateprops.objecttype;core-lifecycle
+com.jivesoftware.community.privateprops.upgrade;core-lifecycle
+com.jivesoftware.community.profile;core-user-management
+com.jivesoftware.community.profile.action;core-user-management
+com.jivesoftware.community.profile.action.include;core-user-management
+com.jivesoftware.community.profile.rest;core-user-management, core-api
+com.jivesoftware.community.profile.rest.impl;core-user-management, core-api
+com.jivesoftware.community.project;core-places
+com.jivesoftware.community.project.action;core-places
+com.jivesoftware.community.project.admin.action;core-places, core-administration
+com.jivesoftware.community.project.cache;core-places
+com.jivesoftware.community.project.entitlements;core-places, core-authorization
+com.jivesoftware.community.project.importexport;core-places
+com.jivesoftware.community.project.objecttype;core-places
+com.jivesoftware.community.project.rest;core-places, core-api
+com.jivesoftware.community.project.rest.impl;core-places, core-api
+com.jivesoftware.community.project.upgrade;core-places
+com.jivesoftware.community.project.util;core-places
+com.jivesoftware.community.properties.spring;core-lifecycle
+com.jivesoftware.community.proxy;core-content, core-authorization
+com.jivesoftware.community.quest;core-gamification
+com.jivesoftware.community.quest.component.quest;core-gamification
+com.jivesoftware.community.quest.component.quest.impl;core-gamification
+com.jivesoftware.community.quest.component.step;core-gamification
+com.jivesoftware.community.quest.component.step.impl;core-gamification
+com.jivesoftware.community.quest.component.viewdata;core-gamification
+com.jivesoftware.community.quest.component.viewdata.impl;core-gamification
+com.jivesoftware.community.quest.event;core-gamification
+com.jivesoftware.community.quest.impl;core-gamification
+com.jivesoftware.community.quest.impl.trial;core-gamification
+com.jivesoftware.community.quest.objecttype;core-gamification
+com.jivesoftware.community.quest.proxy;core-gamification
+com.jivesoftware.community.quest.view;core-gamification
+com.jivesoftware.community.question;core-content
+com.jivesoftware.community.r2;core-activity-stream
+com.jivesoftware.community.r2.request;core-activity-stream
+com.jivesoftware.community.r2.result;core-activity-stream
+com.jivesoftware.community.rating;core-gamification
+com.jivesoftware.community.rating.dao;core-gamification
+com.jivesoftware.community.rating.dao.impl;core-gamification
+com.jivesoftware.community.rating.impl;core-gamification
+com.jivesoftware.community.rating.proxy;core-gamification
+com.jivesoftware.community.rating.rest;core-gamification
+com.jivesoftware.community.rating.rest.impl;core-gamification
+com.jivesoftware.community.rating.util;core-gamification
+com.jivesoftware.community.rating.widget;core-gamification
+com.jivesoftware.community.realtime;core-notification
+com.jivesoftware.community.realtime.event;core-notification
+com.jivesoftware.community.realtime.handler;core-notification
+com.jivesoftware.community.realtime.impl;core-notification
+com.jivesoftware.community.realtime.rest;core-notification, core-api
+com.jivesoftware.community.realtime.rest.impl;core-notification, core-api
+com.jivesoftware.community.realtime.util;core-notification
+com.jivesoftware.community.recentcontent.impl;core-content
+com.jivesoftware.community.redirect;core-web-and-ui
+com.jivesoftware.community.redirect.action;core-web-and-ui
+com.jivesoftware.community.redirect.dao;core-web-and-ui
+com.jivesoftware.community.redirect.rules;core-web-and-ui
+com.jivesoftware.community.redirect.upgrade;core-web-and-ui
+com.jivesoftware.community.renderer;core-web-and-ui
+com.jivesoftware.community.renderer.annotations;core-web-and-ui
+com.jivesoftware.community.renderer.cache;core-web-and-ui
+com.jivesoftware.community.renderer.cache.impl;core-web-and-ui
+com.jivesoftware.community.renderer.cache.upgrade;core-web-and-ui
+com.jivesoftware.community.renderer.filter;core-web-and-ui
+com.jivesoftware.community.renderer.filter.regex;core-web-and-ui
+com.jivesoftware.community.renderer.filter.regex.jdk;core-web-and-ui
+com.jivesoftware.community.renderer.filter.rules;core-web-and-ui
+com.jivesoftware.community.renderer.filter.wiki;core-web-and-ui
+com.jivesoftware.community.renderer.filter.wiki.image;core-web-and-ui
+com.jivesoftware.community.renderer.filter.wiki.link;core-web-and-ui
+com.jivesoftware.community.renderer.impl;core-web-and-ui
+com.jivesoftware.community.renderer.impl.v2;core-web-and-ui
+com.jivesoftware.community.renderer.macro;core-web-and-ui
+com.jivesoftware.community.renderer.macro.code;core-web-and-ui
+com.jivesoftware.community.renderer.pdf;core-web-and-ui
+com.jivesoftware.community.renderer.util;core-web-and-ui
+com.jivesoftware.community.rest;core-api
+com.jivesoftware.community.rest.impl;core-api
+com.jivesoftware.community.rest.util;core-api
+com.jivesoftware.community.robots;core-api
+com.jivesoftware.community.rolebadges;core-gamification
+com.jivesoftware.community.rolebadges.impl;core-gamification
+com.jivesoftware.community.rss;core-activity-stream, core-notification
+com.jivesoftware.community.rtc;core-integrations
+com.jivesoftware.community.rtc.action.admin;core-integrations, core-administration
+com.jivesoftware.community.rtc.api;core-integrations
+com.jivesoftware.community.rtc.api.impl;core-integrations
+com.jivesoftware.community.rtc.api.model;core-integrations
+com.jivesoftware.community.rtc.collaboration;core-integrations
+com.jivesoftware.community.rtc.collaboration.dao;core-integrations
+com.jivesoftware.community.rtc.collaboration.dao.impl;core-integrations
+com.jivesoftware.community.rtc.connectors;core-integrations
+com.jivesoftware.community.rtc.event;core-integrations
+com.jivesoftware.community.rtc.impl;core-integrations
+com.jivesoftware.community.rtc.interaction;core-integrations
+com.jivesoftware.community.rtc.interaction.dao;core-integrations
+com.jivesoftware.community.rtc.interaction.dao.impl;core-integrations
+com.jivesoftware.community.rtc.interaction.impl;core-integrations
+com.jivesoftware.community.rtc.proxy;core-integrations
+com.jivesoftware.community.rtc.web.action;core-integrations
+com.jivesoftware.community.rtc.web.struts.converter;core-integrations
+com.jivesoftware.community.rtc.web.struts.mapping;core-integrations
+com.jivesoftware.community.rtc.web.view;core-integrations
+com.jivesoftware.community.rte;core-web-and-ui
+com.jivesoftware.community.RteTest;core-web-and-ui
+com.jivesoftware.community.rtetest;core-web-and-ui
+com.jivesoftware.community.scripts;core-task-engine
+com.jivesoftware.community.scripts.dao;core-task-engine
+com.jivesoftware.community.scripts.dao.impl;core-task-engine
+com.jivesoftware.community.scripts.engine;core-task-engine
+com.jivesoftware.community.scripts.engine.impl;core-task-engine
+com.jivesoftware.community.scripts.engine.jmx;core-task-engine
+com.jivesoftware.community.scripts.event;core-task-engine
+com.jivesoftware.community.scripts.impl;core-task-engine
+com.jivesoftware.community.scripts.objecttype;core-task-engine
+com.jivesoftware.community.search;core-search
+com.jivesoftware.community.search.action;core-search
+com.jivesoftware.community.search.action.admin;core-search, core-administration
+com.jivesoftware.community.search.extractor;core-search
+com.jivesoftware.community.search.opensearch;core-search
+com.jivesoftware.community.search.proxy;core-search, core-authorization
+com.jivesoftware.community.search.rebuild;core-search, core-task-engine
+com.jivesoftware.community.search.rest;core-search, core-api
+com.jivesoftware.community.search.rest.admin;core-search, core-api, core-administration
+com.jivesoftware.community.search.rest.admin.impl;core-search, core-api, core-administration
+com.jivesoftware.community.search.rest.impl;core-search, core-api
+com.jivesoftware.community.search.spotlight;core-search
+com.jivesoftware.community.search.upgrade;core-search, core-data-access-layer
+com.jivesoftware.community.search.user;core-search
+com.jivesoftware.community.search.user.action.admin;core-search
+com.jivesoftware.community.search.user.cloud;core-search
+com.jivesoftware.community.search.user.elasticsearch;core-search
+com.jivesoftware.community.search.user.elasticsearch.json;core-search
+com.jivesoftware.community.search.user.impl;core-search
+com.jivesoftware.community.search.user.proxy;core-search, core-authorization
+com.jivesoftware.community.search.view.admin;core-search, core-administration
+com.jivesoftware.community.sections;core-content
+com.jivesoftware.community.seo;core-search, core-web-and-ui
+com.jivesoftware.community.seo.impl;core-search, core-web-and-ui
+com.jivesoftware.community.service;core-connectivity
+com.jivesoftware.community.service.http;core-connectivity
+com.jivesoftware.community.service.http.mapper;core-connectivity
+com.jivesoftware.community.serviceclient;core-connectivity
+com.jivesoftware.community.sitemap;core-web-and-ui
+com.jivesoftware.community.sitemap.action;core-web-and-ui
+com.jivesoftware.community.sitemap.action.admin;core-web-and-ui
+com.jivesoftware.community.sitemap.builder;core-web-and-ui
+com.jivesoftware.community.sitemap.connector;core-web-and-ui
+com.jivesoftware.community.sitemap.dao;core-web-and-ui
+com.jivesoftware.community.sitemap.helper;core-web-and-ui
+com.jivesoftware.community.sitemap.manager;core-web-and-ui
+com.jivesoftware.community.sitemap.provider;core-web-and-ui
+com.jivesoftware.community.sitemap.task;core-web-and-ui
+com.jivesoftware.community.sns;core-notification
+com.jivesoftware.community.sns.client;core-notification
+com.jivesoftware.community.sns.configuration;core-notification
+com.jivesoftware.community.sns.listeners;core-notification
+com.jivesoftware.community.sns.serialization;core-notification
+com.jivesoftware.community.sns.task;core-notification, core-task-engine
+com.jivesoftware.community.social;core-places
+com.jivesoftware.community.socialgroup;core-places
+com.jivesoftware.community.socialgroup.action;core-places
+com.jivesoftware.community.socialgroup.action.util;core-places
+com.jivesoftware.community.socialgroup.action.views;core-places
+com.jivesoftware.community.socialgroup.entitlements;core-places
+com.jivesoftware.community.socialgroup.impl;core-places
+com.jivesoftware.community.socialgroup.objecttype;core-places
+com.jivesoftware.community.socialgroup.rest;core-places, core-api
+com.jivesoftware.community.socialgroup.rest.impl;core-places, core-api
+com.jivesoftware.community.socialgroup.util;core-places
+com.jivesoftware.community.solution;core-lifecycle
+com.jivesoftware.community.solution.annotations;core-lifecycle
+com.jivesoftware.community.solution.function;core-lifecycle
+com.jivesoftware.community.solution.impl;core-lifecycle
+com.jivesoftware.community.solution.type;core-lifecycle
+com.jivesoftware.community.solution.type.impl;core-lifecycle
+com.jivesoftware.community.spaces;core-places
+com.jivesoftware.community.spaces.action;core-places
+com.jivesoftware.community.spaces.action.util;core-places
+com.jivesoftware.community.spaces.bulk;core-places
+com.jivesoftware.community.spaces.entitlements;core-places, core-authorization
+com.jivesoftware.community.spaces.objecttype;core-places
+com.jivesoftware.community.spaces.rest;core-places, core-api
+com.jivesoftware.community.spaces.suggest;core-places
+com.jivesoftware.community.statics;core-content
+com.jivesoftware.community.statics.config;core-content
+com.jivesoftware.community.stats;core-monitoring
+com.jivesoftware.community.statuslevel;core-gamification
+com.jivesoftware.community.statuslevel.action;core-gamification
+com.jivesoftware.community.statuslevel.event;core-gamification
+com.jivesoftware.community.statuslevel.impl;core-gamification
+com.jivesoftware.community.statuslevel.proxy;core-gamification
+com.jivesoftware.community.statuslevel.upgrade;core-gamification
+com.jivesoftware.community.stream;core-activity-stream
+com.jivesoftware.community.supportcenter;core-content, core-web-and-ui
+com.jivesoftware.community.supportcenter.actions;core-content, core-web-and-ui
+com.jivesoftware.community.supportcenter.admin;core-content, core-web-and-ui
+com.jivesoftware.community.supportcenter.regions;core-content, core-web-and-ui
+com.jivesoftware.community.tags;core-content
+com.jivesoftware.community.tags.authz;core-content
+com.jivesoftware.community.tags.listeners;core-content
+com.jivesoftware.community.tags.rest;core-content, core-api
+com.jivesoftware.community.tags.rest.impl;core-content, core-api
+com.jivesoftware.community.tags.type;core-content
+com.jivesoftware.community.tags.type.impl;core-content
+com.jivesoftware.community.tags.upgrade;core-content
+com.jivesoftware.community.tags.utils;core-content
+com.jivesoftware.community.tagset;core-content
+com.jivesoftware.community.tagset.impl;core-content
+com.jivesoftware.community.tagset.impl.dao;core-content
+com.jivesoftware.community.tagset.proxy;core-content, core-authorization
+com.jivesoftware.community.tasks;core-task-engine
+com.jivesoftware.community.tasks.reduce;core-task-engine
+com.jivesoftware.community.theme;core-web-and-ui
+com.jivesoftware.community.theme.rest;core-web-and-ui, core-api
+com.jivesoftware.community.tileinstance.impl;core-extension-points
+com.jivesoftware.community.tips;core-content
+com.jivesoftware.community.tips.impl;core-content
+com.jivesoftware.community.tips.providers;core-content
+com.jivesoftware.community.trial;core-moderation
+com.jivesoftware.community.trial.action;core-moderation
+com.jivesoftware.community.trial.events;core-moderation
+com.jivesoftware.community.trial.events.util;core-moderation
+com.jivesoftware.community.trial.impl;core-moderation
+com.jivesoftware.community.trial.proxy;core-moderation, core-authorization
+com.jivesoftware.community.trial.rest;core-moderation, core-api
+com.jivesoftware.community.trial.rest.impl;core-moderation, core-api
+com.jivesoftware.community.trial.view;core-moderation
+com.jivesoftware.community.ui;core-web-and-ui
+com.jivesoftware.community.uiextensions;core-web-and-ui
+com.jivesoftware.community.upgrade;core-data-access-layer
+com.jivesoftware.community.upgrade.eae;core-data-access-layer, core-activity-stream
+com.jivesoftware.community.upgrade.post;core-data-access-layer
+com.jivesoftware.community.upgrade.tasks;core-data-access-layer
+com.jivesoftware.community.upgrade.tasks.eae;core-data-access-layer, core-activity-stream
+com.jivesoftware.community.upgrade.tasks.eae.r800;core-data-access-layer, core-activity-stream
+com.jivesoftware.community.upgrade.tasks.eae.r900;core-data-access-layer, core-activity-stream
+com.jivesoftware.community.upgrade.tasks.eae.r901;core-data-access-layer, core-activity-stream
+com.jivesoftware.community.upgrade.tasks.eae.r2015_3;core-data-access-layer, core-activity-stream
+com.jivesoftware.community.upgrade.tasks.helper;core-data-access-layer
+com.jivesoftware.community.upgrade.tasks.newfeatures;core-data-access-layer
+com.jivesoftware.community.upgrade.tasks.r9c1;core-data-access-layer
+com.jivesoftware.community.upgrade.tasks.r800;core-data-access-layer
+com.jivesoftware.community.upgrade.tasks.r2015_3;core-data-access-layer
+com.jivesoftware.community.upgrade.tasks.r2016_1;core-data-access-layer
+com.jivesoftware.community.upgrade.tasks.r2016_2;core-data-access-layer
+com.jivesoftware.community.upgrade.tasks.r2016_3;core-data-access-layer
+com.jivesoftware.community.upgrade.tasks.r2017_1;core-data-access-layer
+com.jivesoftware.community.upgrade.tasks.r2018_1;core-data-access-layer
+com.jivesoftware.community.upgrade.tasks.reusable;core-data-access-layer
+com.jivesoftware.community.user;core-authentication
+com.jivesoftware.community.user.action;core-authentication
+com.jivesoftware.community.user.browse;core-web-and-ui
+com.jivesoftware.community.user.browse.rest.impl;core-web-and-ui
+com.jivesoftware.community.user.directory.rest;core-authentication, core-api
+com.jivesoftware.community.user.directory.rest.impl;core-authentication, core-api
+com.jivesoftware.community.user.entitlements;core-authentication, core-authorization
+com.jivesoftware.community.user.events;core-lifecycle
+com.jivesoftware.community.user.preferences.action;core-web-and-ui
+com.jivesoftware.community.user.preferences.action.modal;core-web-and-ui
+com.jivesoftware.community.user.preferences.navbar;core-web-and-ui
+com.jivesoftware.community.user.preferences.util;core-web-and-ui
+com.jivesoftware.community.user.profile;core-user-management
+com.jivesoftware.community.user.profile.action;core-user-management
+com.jivesoftware.community.user.profile.authz;core-user-management, core-authorization
+com.jivesoftware.community.user.profile.config;core-user-management
+com.jivesoftware.community.user.profile.data.dao.image;core-user-management
+com.jivesoftware.community.user.profile.data.dao.image.impl;core-user-management
+com.jivesoftware.community.user.profile.data.dao.user;core-user-management
+com.jivesoftware.community.user.profile.data.dao.user.impl;core-user-management
+com.jivesoftware.community.user.profile.data.provider;core-user-management
+com.jivesoftware.community.user.profile.data.provider.impl;core-user-management
+com.jivesoftware.community.user.profile.events;core-user-management
+com.jivesoftware.community.user.profile.impl;core-user-management
+com.jivesoftware.community.user.profile.r2;core-user-management
+com.jivesoftware.community.user.profile.security;core-user-management
+com.jivesoftware.community.user.profile.security.action;core-user-management
+com.jivesoftware.community.user.profile.security.dao;core-user-management
+com.jivesoftware.community.user.profile.security.proxy;core-user-management, core-authorization
+com.jivesoftware.community.user.profile.security.strategy;core-user-management
+com.jivesoftware.community.user.profile.security.upgrade;core-user-management
+com.jivesoftware.community.user.profile.upgrade;core-user-management
+com.jivesoftware.community.user.profile.util;core-user-management
+com.jivesoftware.community.user.proxy;core-user-management, core-authorization
+com.jivesoftware.community.user.proxy.impl;core-user-management, core-authorization
+com.jivesoftware.community.user.registration;core-authentication
+com.jivesoftware.community.user.registration.rest;core-authentication, core-api
+com.jivesoftware.community.user.registration.rest.impl;core-authentication, core-api
+com.jivesoftware.community.user.relationships;core-user-management
+com.jivesoftware.community.user.relationships.action;core-user-management
+com.jivesoftware.community.user.relationships.dao;core-user-management
+com.jivesoftware.community.user.relationships.proxy;core-user-management
+com.jivesoftware.community.user.relationships.rest;core-user-management
+com.jivesoftware.community.user.relationships.rest.impl;core-user-management
+com.jivesoftware.community.user.relationships.upgrade;core-user-management
+com.jivesoftware.community.user.rest;core-authentication, core-api
+com.jivesoftware.community.user.rest.impl;core-authentication, core-api
+com.jivesoftware.community.user.struts;core-web-and-ui
+com.jivesoftware.community.user.suggest;core-web-and-ui
+com.jivesoftware.community.user.sync;core-authentication, core-user-management
+com.jivesoftware.community.user.sync.ldap;core-user-management
+com.jivesoftware.community.user.util;core-utility
+com.jivesoftware.community.util;core-api, core-authorization, core-content, core-web-and-ui, core-utility
+com.jivesoftware.community.util.collect;core-utility
+com.jivesoftware.community.util.concurrent;core-utility
+com.jivesoftware.community.util.db;core-data-access-layer
+com.jivesoftware.community.util.feeds;core-activity-stream
+com.jivesoftware.community.util.spring;core-utility
+com.jivesoftware.community.validation;core-utility
+com.jivesoftware.community.validation.form;core-utility
+com.jivesoftware.community.valuecase;core-content, core-web-and-ui
+com.jivesoftware.community.valuecase.def;core-content, core-web-and-ui
+com.jivesoftware.community.valuecase.impl;core-content, core-web-and-ui
+com.jivesoftware.community.valuecase.proxy;core-content, core-web-and-ui
+com.jivesoftware.community.valuecase.upgrade;core-content, core-web-and-ui
+com.jivesoftware.community.valuecase.util;core-content, core-web-and-ui
+com.jivesoftware.community.valuecase.vcdds;core-content, core-web-and-ui
+com.jivesoftware.community.valuecase.xstream;core-content, core-web-and-ui
+com.jivesoftware.community.video;core-content
+com.jivesoftware.community.video.action;core-content
+com.jivesoftware.community.video.action.admin;core-content, core-administration
+com.jivesoftware.community.video.action.ajax;core-content, core-web-and-ui
+com.jivesoftware.community.video.authz;core-content, core-authorization
+com.jivesoftware.community.video.beans;core-content
+com.jivesoftware.community.video.client;core-content, core-connectivity
+com.jivesoftware.community.video.client.authorization;core-content, core-connectivity
+com.jivesoftware.community.video.client.delete;core-content, core-connectivity
+com.jivesoftware.community.video.client.download;core-content, core-connectivity
+com.jivesoftware.community.video.client.oembed;core-content, core-connectivity
+com.jivesoftware.community.video.client.registration;core-content, core-connectivity
+com.jivesoftware.community.video.client.status;core-content, core-connectivity
+com.jivesoftware.community.video.client.upload;core-content, core-connectivity
+com.jivesoftware.community.video.events;core-content
+com.jivesoftware.community.video.exceptions;core-content
+com.jivesoftware.community.video.ovpproviders;core-content
+com.jivesoftware.community.video.ovpproviders.generic;core-content
+com.jivesoftware.community.video.ovpproviders.perceptive;core-content
+com.jivesoftware.community.video.ovpproviders.perceptive.authz;core-content
+com.jivesoftware.community.video.providers;core-content
+com.jivesoftware.community.video.tasks;core-content, core-task-engine
+com.jivesoftware.community.video.type;core-content
+com.jivesoftware.community.video.web.struts;core-content
+com.jivesoftware.community.web;core-lifecycle, core-web-and-ui
+com.jivesoftware.community.web.action;core-web-and-ui
+com.jivesoftware.community.web.component;core-content, core-web-and-ui
+com.jivesoftware.community.web.dwr;core-web-and-ui
+com.jivesoftware.community.web.feeds;core-web-and-ui
+com.jivesoftware.community.web.feeds.wfw;core-web-and-ui
+com.jivesoftware.community.web.filter;core-authentication, core-administration, core-web-and-ui
+com.jivesoftware.community.web.filter.activity;core-authentication, core-administration, core-web-and-ui
+com.jivesoftware.community.web.filter.compression;core-authentication, core-administration, core-web-and-ui
+com.jivesoftware.community.web.helper;core-utility
+com.jivesoftware.community.web.helper.impl;core-utility
+com.jivesoftware.community.web.impl;core-web-and-ui
+com.jivesoftware.community.web.multipart;core-content
+com.jivesoftware.community.web.multipart.provider;core-content
+com.jivesoftware.community.web.multipart.provider.impl;core-content
+com.jivesoftware.community.web.region;core-web-and-ui
+com.jivesoftware.community.web.region.chrome;core-web-and-ui
+com.jivesoftware.community.web.region.chrome.input;core-web-and-ui
+com.jivesoftware.community.web.region.struts;core-web-and-ui
+com.jivesoftware.community.web.resource;core-web-and-ui
+com.jivesoftware.community.web.resource.bean;core-web-and-ui
+com.jivesoftware.community.web.resource.configuration;core-web-and-ui
+com.jivesoftware.community.web.resource.ext;core-web-and-ui
+com.jivesoftware.community.web.resource.ext.impl;core-web-and-ui
+com.jivesoftware.community.web.resource.impl;core-web-and-ui
+com.jivesoftware.community.web.resource.loader;core-web-and-ui
+com.jivesoftware.community.web.resource.loader.file;core-web-and-ui
+com.jivesoftware.community.web.resource.loader.javascript;core-web-and-ui
+com.jivesoftware.community.web.rest;core-api
+com.jivesoftware.community.web.rest.entities;core-api
+com.jivesoftware.community.web.rest.filters;core-api
+com.jivesoftware.community.web.rest.provider;core-api
+com.jivesoftware.community.web.rest.provider.linkedData;core-api
+com.jivesoftware.community.web.rest.util;core-api
+com.jivesoftware.community.web.security;core-authentication, core-authorization
+com.jivesoftware.community.web.security.config;core-authentication, core-authorization
+com.jivesoftware.community.web.security.dao;core-authentication, core-authorization
+com.jivesoftware.community.web.servlet;core-web-and-ui
+com.jivesoftware.community.web.soy;core-web-and-ui
+com.jivesoftware.community.web.soy.action;core-web-and-ui
+com.jivesoftware.community.web.soy.bundles;core-web-and-ui
+com.jivesoftware.community.web.soy.directives;core-web-and-ui
+com.jivesoftware.community.web.soy.functions;core-web-and-ui
+com.jivesoftware.community.web.soy.functions.list;core-web-and-ui
+com.jivesoftware.community.web.soy.functions.map;core-web-and-ui
+com.jivesoftware.community.web.soy.functions.string;core-web-and-ui
+com.jivesoftware.community.web.soy.i18n;core-web-and-ui
+com.jivesoftware.community.web.soy.i18n.bundles;core-web-and-ui
+com.jivesoftware.community.web.soy.impl;core-web-and-ui
+com.jivesoftware.community.web.soy.plugins;core-web-and-ui
+com.jivesoftware.community.web.struts;core-web-and-ui
+com.jivesoftware.community.web.struts.action;core-web-and-ui
+com.jivesoftware.community.web.struts.component;core-web-and-ui
+com.jivesoftware.community.web.struts.component.model;core-web-and-ui
+com.jivesoftware.community.web.struts.converter;core-web-and-ui
+com.jivesoftware.community.web.struts.interceptors;core-web-and-ui
+com.jivesoftware.community.web.struts.mapping;core-web-and-ui
+com.jivesoftware.community.web.struts.mitui;core-web-and-ui
+com.jivesoftware.community.web.struts.mitui.configurations.paths;core-web-and-ui
+com.jivesoftware.community.web.struts.util;core-web-and-ui
+com.jivesoftware.community.web.tag;core-web-and-ui
+com.jivesoftware.community.web.tag.jsp;core-web-and-ui
+com.jivesoftware.community.web.util;core-utility
+com.jivesoftware.community.web.view;core-web-and-ui
+com.jivesoftware.community.web.viewSoy;core-web-and-ui
+com.jivesoftware.community.webhooks;core-notification
+com.jivesoftware.community.webhooks.addons;core-notification
+com.jivesoftware.community.webhooks.addons.view;core-notification
+com.jivesoftware.community.webhooks.dao;core-notification
+com.jivesoftware.community.webhooks.dao.impl;core-notification
+com.jivesoftware.community.webhooks.event;core-notification
+com.jivesoftware.community.webhooks.event.listener;core-notification
+com.jivesoftware.community.webhooks.impl;core-notification
+com.jivesoftware.community.webhooks.objecttype;core-notification
+com.jivesoftware.community.webhooks.upgrade;core-notification
+com.jivesoftware.community.webservices;core-api
+com.jivesoftware.community.webservices.bridge;core-api
+com.jivesoftware.community.webservices.bridge.client;core-api
+com.jivesoftware.community.webservices.bridge.client.impl;core-api
+com.jivesoftware.community.webservices.bridge.impl;core-api
+com.jivesoftware.community.webservices.client;core-api
+com.jivesoftware.community.webservices.rest;core-api
+com.jivesoftware.community.webservices.server;core-api
+com.jivesoftware.community.webservices.server.config;core-api
+com.jivesoftware.community.webservices.server.xfire;core-api
+com.jivesoftware.community.welcome;core-content
+com.jivesoftware.community.widget;core-extension-points
+com.jivesoftware.community.widget.action;core-extension-points
+com.jivesoftware.community.widget.ext;core-extension-points
+com.jivesoftware.community.widget.ext.impl;core-extension-points
+com.jivesoftware.community.widget.impl;core-extension-points
+com.jivesoftware.community.widget.objecttype;core-extension-points
+com.jivesoftware.community.widget.presentation;core-extension-points
+com.jivesoftware.community.widget.presentation.strategy;core-extension-points
+com.jivesoftware.community.widget.remote;core-extension-points
+com.jivesoftware.community.widget.security;core-extension-points
+com.jivesoftware.community.widget.security.impl;core-extension-points
+com.jivesoftware.community.widget.upgrade;core-extension-points
+com.jivesoftware.community.widget.util;core-extension-points
+com.jivesoftware.community.widget.view;core-extension-points
+com.jivesoftware.community.work;core-web-and-ui
+com.jivesoftware.community.work.action;core-web-and-ui
+com.jivesoftware.community.work.rest;core-web-and-ui
+com.jivesoftware.community.work.rest.impl;core-web-and-ui
+com.jivesoftware.community.workflow;core-moderation
+com.jivesoftware.conversion;core-content, core-api
+com.jivesoftware.conversion.comment;core-content, core-api
+com.jivesoftware.conversion.connectors;core-content, core-api
+com.jivesoftware.conversion.dao;core-content, core-api
+com.jivesoftware.conversion.dao.impl;core-content, core-api
+com.jivesoftware.conversion.exceptions;core-content, core-api
+com.jivesoftware.conversion.executor;core-content, core-api
+com.jivesoftware.conversion.impl;core-content, core-api
+com.jivesoftware.conversion.impl.listeners;core-content, core-api
+com.jivesoftware.conversion.model;core-content, core-api
+com.jivesoftware.conversion.modifiers;core-content, core-api
+com.jivesoftware.conversion.provider;core-content, core-api
+com.jivesoftware.conversion.proxy;core-content, core-api
+com.jivesoftware.conversion.storage;core-content, core-api
+com.jivesoftware.conversion.storage.impl;core-content, core-api
+com.jivesoftware.conversion.struts;core-content, core-api
+com.jivesoftware.conversion.struts.admin;core-content, core-api
+com.jivesoftware.conversion.tasks;core-content, core-api
+com.jivesoftware.conversion.upgrade.tasks;core-content, core-api
+com.jivesoftware.conversion.util;core-content, core-api
+com.jivesoftware.conversion.webservices;core-content, core-api
+com.jivesoftware.conversion.webservices.impl;core-content, core-api
+com.jivesoftware.conversion.webservices.interceptors;core-content, core-api
+com.jivesoftware.enterprise.solutions;core-content
+com.jivesoftware.eos;core-storage-integration
+com.jivesoftware.eos.fs;core-storage-integration
+com.jivesoftware.eos.jdbc;core-storage-integration
+com.jivesoftware.eos.jdbc.util;core-storage-integration
+com.jivesoftware.eos.s3;core-storage-integration
+com.jivesoftware.eos.spi.marshall;core-storage-integration
+com.jivesoftware.eos.spi.storage;core-storage-integration
+com.jivesoftware.eos.util;core-storage-integration
+com.jivesoftware.helper;core-extension-points
+com.jivesoftware.hosting;core-administration
+com.jivesoftware.hosting.aaa;core-authentication, core-administration
+com.jivesoftware.hosting.action;core-web-and-ui
+com.jivesoftware.hosting.demo;core-web-and-ui
+com.jivesoftware.hosting.demo.autoresponder;core-web-and-ui
+com.jivesoftware.hosting.demo.autoresponder.event.listeners;core-web-and-ui
+com.jivesoftware.hosting.rest.v1;core-web-and-ui
+com.jivesoftware.hosting.rest.v1.impl;core-web-and-ui
+com.jivesoftware.hosting.timeshift.action;core-web-and-ui
+com.jivesoftware.hosting.timeshift.api;core-web-and-ui
+com.jivesoftware.hosting.timeshift.updaters;core-web-and-ui
+com.jivesoftware.hosting.util;core-utility
+com.jivesoftware.io.output;core-utility
+com.jivesoftware.ldap_fix;core-user-management
+com.jivesoftware.render;core-web-and-ui
+com.jivesoftware.render.diag;core-web-and-ui
+com.jivesoftware.render.meta;core-web-and-ui
+com.jivesoftware.render.region;core-web-and-ui
+com.jivesoftware.render.region.error;core-web-and-ui
+com.jivesoftware.render.view;core-web-and-ui
+com.jivesoftware.render.view.soy;core-web-and-ui
+com.jivesoftware.service.client;core-connectivity
+com.jivesoftware.service.client.search;core-connectivity, core-search
+com.jivesoftware.service.client.search.http;core-connectivity, core-search
+com.jivesoftware.service.ingress.content.activity;core-connectivity, core-activity-stream
+com.jivesoftware.service.search;core-search
+com.jivesoftware.services.playbox;core-gamification
+com.jivesoftware.services.playbox.action;core-gamification
+com.jivesoftware.services.playbox.action.url;core-gamification
+com.jivesoftware.services.playbox.activity;core-gamification
+com.jivesoftware.services.playbox.activity.questpromotion;core-gamification
+com.jivesoftware.services.playbox.admin.action;core-gamification
+com.jivesoftware.services.playbox.ca;core-gamification
+com.jivesoftware.services.playbox.cache;core-gamification
+com.jivesoftware.services.playbox.client;core-gamification
+com.jivesoftware.services.playbox.client.entity;core-gamification
+com.jivesoftware.services.playbox.client.entity.UserPanel;core-gamification
+com.jivesoftware.services.playbox.dao;core-gamification
+com.jivesoftware.services.playbox.email;core-gamification
+com.jivesoftware.services.playbox.i18n;core-gamification
+com.jivesoftware.services.playbox.impl;core-gamification
+com.jivesoftware.services.playbox.inbox;core-gamification
+com.jivesoftware.services.playbox.listeners;core-gamification
+com.jivesoftware.services.playbox.models;core-gamification
+com.jivesoftware.services.playbox.navbar;core-gamification
+com.jivesoftware.services.playbox.proxy;core-gamification
+com.jivesoftware.services.playbox.service;core-gamification
+com.jivesoftware.services.playbox.web.soy;core-gamification
+com.jivesoftware.spi;core-api
+com.jivesoftware.spi.user;core-api
+com.jivesoftware.struts2.component;core-web-and-ui
+com.jivesoftware.struts2.interceptor;core-web-and-ui
+com.jivesoftware.util;core-utility
+com.jivesoftware.util.classloader;core-utility
+com.jivesoftware.util.cron;core-utility
+com.jivesoftware.util.diff;core-utility
+com.jivesoftware.util.jwt;core-utility
+com.jivesoftware.util.spell;core-utility
+com.jivesoftware.util.ssl;core-utility
+com.jivesoftware.util.ssl.impl;core-utility
+com.jivesoftware.util.ssl.rest;core-utility
+com.jivesoftware.util.task;core-utility
+com.jivesoftware.version;core-utility
+com.jivesoftware.visibility;core-content
