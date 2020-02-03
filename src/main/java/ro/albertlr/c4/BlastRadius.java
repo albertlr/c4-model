@@ -66,32 +66,41 @@ public class BlastRadius {
 
         System.out.println("********Load FA mapping ******");
 
-        for (String comp : allUsedComponents) {
-            Set<String> secondDegree = new HashSet<>();
-            System.out.printf("***********************************%s******************************************%n", comp);
-            Set<String> linkedComponents = loadingRelatedComponents(links, comp);
-            linkedComponents.remove(comp);
-            System.out.printf("***No. of First degree components: %d***%n", linkedComponents.size());
-            for (String s : linkedComponents) {
-                System.out.printf(" -> %s%n", s);
-            }
-            System.out.printf("Blast Radius for First Degree: %f%n", ((double) (linkedComponents.size()) / allUsedComponents.size()) * 100);
-            for (String s : linkedComponents) {
-                Set<String> sdc = loadingRelatedComponents(links, s);
-                secondDegree.addAll(sdc);
-            }
-            secondDegree.remove(comp);
-            for (String d : secondDegree) {
-                System.out.printf(" ---> %s%n", d);
-            }
+        Workbook workbook = new XSSFWorkbook();
+        Sheet sheet = prepareExcelFile(workbook);
+        File file = new File("/Users/ssc/Downloads/shakeel.xlsx");
+        FileOutputStream outputStream = new FileOutputStream(file);
+        try {
 
-            System.out.printf("***No. of Second degree components: %d***%n", secondDegree.size());
-            System.out.printf("Blast Radius for Second Degree: %f%n", ((double) (secondDegree.size()) / allUsedComponents.size()) * 100);
+            int rowNum = 1;
+            for (String comp : allUsedComponents) {
+                Set<String> secondDegree = new HashSet<>();
+                System.out.printf("***********************************%s******************************************%n", comp);
+                Set<String> linkedComponents = loadingRelatedComponents(links, comp);
+                linkedComponents.remove(comp);
+                System.out.printf("***No. of First degree components: %d***%n", linkedComponents.size());
+                for (String s : linkedComponents) {
+                    System.out.printf(" -> %s%n", s);
+                }
+                System.out.printf("Blast Radius for First Degree: %f%n", ((double) (linkedComponents.size()) / allUsedComponents.size()) * 100);
+                for (String s : linkedComponents) {
+                    Set<String> sdc = loadingRelatedComponents(links, s);
+                    secondDegree.addAll(sdc);
+                }
+                secondDegree.remove(comp);
+                for (String d : secondDegree) {
+                    System.out.printf(" ---> %s%n", d);
+                }
 
-            Set<String> test = new HashSet<>(linkedComponents);
-            test.addAll(secondDegree);
-            System.out.printf("****No.of component in both level %d***%n", test.size());
-            System.out.printf("Blast Radius of First & Second Degree: %f%n", ((double) (test.size()) / allUsedComponents.size()) * 100);
+                System.out.printf("***No. of Second degree components: %d***%n", secondDegree.size());
+                System.out.printf("Blast Radius for Second Degree: %f%n", ((double) (secondDegree.size()) / allUsedComponents.size()) * 100);
+
+                Set<String> allComponents = new HashSet<>(linkedComponents);
+                allComponents.addAll(secondDegree);
+                System.out.printf("****No.of component in both level %d***%n", allComponents.size());
+                System.out.printf("Blast Radius of First & Second Degree: %f%n", ((double) (allComponents.size()) / allUsedComponents.size()) * 100);
+
+                writeToExcel(linkedComponents, secondDegree, allComponents, totalNoOfComponents, comp, rowNum++, sheet);
 
 //            // --- NOW FUNCTIONAL AREA STUFF
 //            Set<String> faAffected = new HashSet<>();
@@ -106,6 +115,11 @@ public class BlastRadius {
 //                System.out.printf(" ---FA-> %s%n", d);
 //            }
 //            System.out.printf("Blast Radius of First & Second level FA affeted : %f%n", ((double) (faAffected.size()) / numberOfFunctionalAreas) * 100);
+            }
+        } finally {
+            workbook.write(outputStream);
+            outputStream.close();
+            workbook.close();
         }
 
     }
@@ -125,5 +139,61 @@ public class BlastRadius {
                 });
 
         return components;
+    }
+
+    private static Sheet prepareExcelFile(Workbook workbook) throws FileNotFoundException {
+
+        Sheet sheet = workbook.createSheet("BlastRadius");
+        // Create a Font for styling header cells
+        Font headerFont = workbook.createFont();
+        headerFont.setBold(true);
+        headerFont.setFontHeightInPoints((short) 14);
+        headerFont.setColor(IndexedColors.RED.getIndex());
+
+        // Create a CellStyle with the font
+        CellStyle headerCellStyle = workbook.createCellStyle();
+        headerCellStyle.setFont(headerFont);
+
+        // Create a Row
+        Row headerRow = sheet.createRow(0);
+        // Create cells
+        for(int i = 0; i < COLUMNS.length; i++) {
+            Cell cell = headerRow.createCell(i);
+            cell.setCellValue(COLUMNS[i]);
+            cell.setCellStyle(headerCellStyle);
+        }
+
+        return sheet;
+    }
+
+    private static void writeToExcel(Set<String> first, Set<String> second, Set<String> combined, int totalComponents, String component, int rowNum, Sheet sheet) throws IOException {
+
+        Row row = sheet.createRow(rowNum);
+        row.createCell(0)
+                .setCellValue(component);
+        row.createCell(1)
+                .setCellValue(first.size());
+        row.createCell(2)
+                .setCellValue(((double)(first.size()) / totalComponents) * 100);
+        row.createCell(3)
+                .setCellValue(second.size());
+        row.createCell(4)
+                .setCellValue(((double)(second.size()) / totalComponents) * 100);
+        row.createCell(5)
+                .setCellValue(((double)(combined.size()) / totalComponents) * 100);
+        StringBuilder firstDegree = new StringBuilder();
+        for (String s : first) {
+            firstDegree.append(s + "\n");
+        }
+        row.createCell(6)
+                .setCellValue(firstDegree.toString());
+        StringBuilder secondDegree = new StringBuilder();
+        for (String s : second) {
+            if (!first.contains(s)) {
+                secondDegree.append(s + "\n");
+            }
+        }
+        row.createCell(7)
+                .setCellValue(secondDegree.toString());
     }
 }
