@@ -63,14 +63,15 @@ import static ro.albertlr.c4.Params.not;
 public class LinksProcessor {
 
     public static void main(String[] args) throws Exception {
-        CommandLine cli = Params.blastRadiusCli(args);
+        CommandLine cli = Params.packageToComponentCli(args);
 
         Context.ContextBuilder contextBuilder = Context.builder();
 
-
-        final String dotFile = getParameter(cli, DOT_FILE_ARG); //"jive-core-3000.5.0.jar-fas-clean.dot";
+        // eg:  jive-core-3000.5.0.jar-fas-clean.dot
+        final String dotFile = getParameter(cli, DOT_FILE_ARG);
         contextBuilder.dotFile(dotFile);
-        final String mappingFile = getParameter(cli, CSV_FILE_ARG); // "jive-core-v2-FAs-97-components.csv";
+        // eg: jive-core-v2-FAs-97-components.csv
+        final String mappingFile = getParameter(cli, CSV_FILE_ARG);
         contextBuilder.csvFile(mappingFile);
 
         final String outputDotFile = getParameter(cli, PROCESSED_DOT_FILE_ARG, dotFile + ".comp.dot");
@@ -120,7 +121,7 @@ public class LinksProcessor {
             System.err.println("Could not generate PDF");
             e.printStackTrace();
         } finally {
-            System.out.printf(":: normalizing dot file %s completed in %s ::%n", dotFile, stopwatch);
+            System.out.printf(":: normalizing dot file %s completed in %s ::%n", context.getDotFile(), stopwatch);
         }
     }
 
