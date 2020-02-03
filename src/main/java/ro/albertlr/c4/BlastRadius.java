@@ -166,34 +166,39 @@ public class BlastRadius {
         return sheet;
     }
 
-    private static void writeToExcel(Set<String> first, Set<String> second, Set<String> combined, int totalComponents, String component, int rowNum, Sheet sheet) throws IOException {
+    private static void writeToExcel(Set<String> first, Set<String> second, Set<String> combined, int totalComponents, String component, int rowNum, Sheet sheet) {
 
-        Row row = sheet.createRow(rowNum);
-        row.createCell(0)
-                .setCellValue(component);
-        row.createCell(1)
-                .setCellValue(first.size());
-        row.createCell(2)
-                .setCellValue(((double)(first.size()) / totalComponents) * 100);
-        row.createCell(3)
-                .setCellValue(second.size());
-        row.createCell(4)
-                .setCellValue(((double)(second.size()) / totalComponents) * 100);
-        row.createCell(5)
-                .setCellValue(((double)(combined.size()) / totalComponents) * 100);
-        StringBuilder firstDegree = new StringBuilder();
-        for (String s : first) {
-            firstDegree.append(s + "\n");
-        }
-        row.createCell(6)
-                .setCellValue(firstDegree.toString());
-        StringBuilder secondDegree = new StringBuilder();
-        for (String s : second) {
-            if (!first.contains(s)) {
-                secondDegree.append(s + "\n");
+        try {
+            Row row = sheet.createRow(rowNum);
+            row.createCell(0)
+                    .setCellValue(component);
+            row.createCell(1)
+                    .setCellValue(first.size());
+            row.createCell(2)
+                    .setCellValue(((double) (first.size()) / totalComponents) * 100);
+            row.createCell(3)
+                    .setCellValue(second.size());
+            row.createCell(4)
+                    .setCellValue(((double) (second.size()) / totalComponents) * 100);
+            row.createCell(5)
+                    .setCellValue(((double) (combined.size()) / totalComponents) * 100);
+            StringBuilder firstDegree = new StringBuilder();
+            for (String s : first) {
+                firstDegree.append(s + "\n");
             }
+            row.createCell(6)
+                    .setCellValue(firstDegree.toString());
+            StringBuilder secondDegree = new StringBuilder();
+            for (String s : second) {
+                if (!first.contains(s)) {
+                    secondDegree.append(s + "\n");
+                }
+            }
+            row.createCell(7)
+                    .setCellValue(secondDegree.toString());
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+            System.err.println("Excel's Limit reached.");
         }
-        row.createCell(7)
-                .setCellValue(secondDegree.toString());
     }
 }
