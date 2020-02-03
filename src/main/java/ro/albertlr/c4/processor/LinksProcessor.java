@@ -21,12 +21,14 @@ package ro.albertlr.c4.processor;
 
 import com.google.common.base.Predicate;
 import com.google.common.base.Stopwatch;
-import com.google.common.base.Strings;
 import com.google.common.collect.Sets;
 import lombok.experimental.UtilityClass;
 import me.tongfei.progressbar.ProgressBar;
+import org.apache.commons.cli.CommandLine;
 import org.eclipse.collections.impl.set.mutable.UnifiedSet;
 import ro.albertlr.c4.Configuration;
+import ro.albertlr.c4.Context;
+import ro.albertlr.c4.Params;
 import ro.albertlr.c4.graph.Link;
 
 import java.io.File;
@@ -45,14 +47,55 @@ import java.util.stream.StreamSupport;
 import static com.google.common.base.Predicates.contains;
 import static com.google.common.base.Predicates.not;
 import static me.tongfei.progressbar.ProgressBarStyle.UNICODE_BLOCK;
+import static ro.albertlr.c4.Params.CSV_FILE_ARG;
+import static ro.albertlr.c4.Params.DOT_FILE_ARG;
+import static ro.albertlr.c4.Params.FILTER_EXTERNAL_COMPONENTS;
+import static ro.albertlr.c4.Params.FILTER_JIVE_COMPONENTS;
+import static ro.albertlr.c4.Params.FILTER_UNIQUE_COMPONENTS;
+import static ro.albertlr.c4.Params.GENERATE_PDF_GRAPH;
+import static ro.albertlr.c4.Params.MAP_JIVE_COMPONENTS;
+import static ro.albertlr.c4.Params.NORMALIZED_DOT_FILE_ARG;
+import static ro.albertlr.c4.Params.PROCESSED_DOT_FILE_ARG;
+import static ro.albertlr.c4.Params.getParameter;
+import static ro.albertlr.c4.Params.not;
 
 @UtilityClass
 public class LinksProcessor {
 
-    public static void normalizeDotFile(String dotFile) {
+    public static void main(String[] args) throws Exception {
+        CommandLine cli = Params.blastRadiusCli(args);
+
+        Context.ContextBuilder contextBuilder = Context.builder();
+
+
+        final String dotFile = getParameter(cli, DOT_FILE_ARG); //"jive-core-3000.5.0.jar-fas-clean.dot";
+        contextBuilder.dotFile(dotFile);
+        final String mappingFile = getParameter(cli, CSV_FILE_ARG); // "jive-core-v2-FAs-97-components.csv";
+        contextBuilder.csvFile(mappingFile);
+
+        final String outputDotFile = getParameter(cli, PROCESSED_DOT_FILE_ARG, dotFile + ".comp.dot");
+        contextBuilder.outputDotFile(outputDotFile);
+
+        contextBuilder.filterJiveComponents(cli.hasOption(FILTER_JIVE_COMPONENTS));
+        contextBuilder.filterExternalComponents(not(cli.hasOption(FILTER_EXTERNAL_COMPONENTS)));
+        contextBuilder.filterUniqueComponents(not(cli.hasOption(FILTER_UNIQUE_COMPONENTS)));
+
+        contextBuilder.mapJiveComponents(cli.hasOption(MAP_JIVE_COMPONENTS));
+
+        contextBuilder.normalizedOutputDotFile(getParameter(cli, NORMALIZED_DOT_FILE_ARG, outputDotFile + ".out"));
+        contextBuilder.generatePdf(cli.hasOption(GENERATE_PDF_GRAPH));
+
+        Context context = contextBuilder.build();
+
+        PackageToComponentMapper.mapAndSave(context); // dotFile, mappingFile, outputDotFile);
+
+        normalizeDotFile(context);
+    }
+
+    public static void normalizeDotFile(Context context) {
         Stopwatch stopwatch = Stopwatch.createStarted();
-        System.out.printf(":: normalizing dot file %s started ::%n", dotFile);
-        Set<Link> loadedLinks = loadLinks(dotFile);
+        System.out.printf(":: normalizing dot file %s started ::%n", context.getOutputDotFile());
+        Set<Link> loadedLinks = loadLinks(context.getOutputDotFile());
 
         Stopwatch processingWatch = Stopwatch.createStarted();
         System.out.printf(":: links processing started ::%n");
@@ -65,11 +108,13 @@ public class LinksProcessor {
         );
         System.out.printf(":: links processing completed in %s ::%n", processingWatch);
 
-        saveToDots(dotFile + ".out", processedLinks);
+        final String normalizedDotFile = context.getNormalizedOutputDotFile();
+
+        saveToDots(normalizedDotFile, processedLinks);
 
         try {
-            if (false) {
-                generatePdfGraph(dotFile + ".out");
+            if (context.isGeneratePdf()) {
+                generatePdfGraph(normalizedDotFile);
             }
         } catch (IOException e) {
             System.err.println("Could not generate PDF");
@@ -100,34 +145,6 @@ public class LinksProcessor {
         } finally {
             System.out.printf(":: generating PDF diagram completed in %s::%n", stopwatch);
         }
-    }
-
-    public static void main(String[] args) throws Exception {
-        final String dotFile =
-                "jive-core-3000.5.0.jar-fas-clean.dot";
-        final String mappingFile = "jive-core-v2-FAs-97-components.csv";
-
-        PackageToComponentMapper.mapAndSave(dotFile, mappingFile, dotFile + ".comp.dot");
-
-        normalizeDotFile(dotFile + ".comp.dot");
-
-//        Set<Link> result = LinksProcessor.loadLinks(dotFile);
-//
-//        int counter = 0;
-//        for (Link links :
-//                unique(
-//                        filterJiveComponents(
-//                                filterExternalComponents(
-//                                        flat(result)
-//                                )
-//                        )
-//                )) {
-//            System.out.printf("%s: %s%n", Strings.padStart(String.valueOf(counter++), 4, '0'), links);
-////            counter++;
-////            if (counter == 100) {
-////                break;
-////            }
-//        }
     }
 
     public static Set<Link> filterJiveComponents(Set<Link> links) {

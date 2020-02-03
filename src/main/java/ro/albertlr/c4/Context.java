@@ -19,9 +19,28 @@
  */
 package ro.albertlr.c4;
 
+import lombok.Builder;
+import lombok.Getter;
+
+@Builder
+@Getter
 public class Context implements AutoCloseable {
+    private boolean filterJiveComponents;
+    private boolean filterExternalComponents;
+    private boolean filterUniqueComponents;
+
+    private boolean mapJiveComponents;
+
+    private boolean generatePdf;
+
+    private String dotFile;
+    private String csvFile;
+
+    private String outputDotFile;
+    private String normalizedOutputDotFile;
+    private String pdfFile;
+
     @Override
     public void close() throws Exception {
-
     }
 }

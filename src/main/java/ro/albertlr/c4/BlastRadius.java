@@ -44,14 +44,20 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static ro.albertlr.c4.Params.CSV_FILE_ARG;
+import static ro.albertlr.c4.Params.DOT_FILE_ARG;
+import static ro.albertlr.c4.Params.XLS_FILE_ARG;
+import static ro.albertlr.c4.Params.getParameter;
+
 public class BlastRadius {
     private static final String[] COLUMNS = {"Component", "No. of First Degree Components", "First Degree Blast Radius", "No. of Second Degree Components", "Second Degree Blast Radius", "Blast Radius", "First Degree Components", "Second Degree Components"};
+
     public static void main(String[] args) throws Exception {
         CommandLine cli = Params.blastRadiusCli(args);
 
-        final String mappingFile = Params.getParameter(cli, Params.CSV_FILE_ARG); // "jive-core-v2-FAs-97-components.csv";
-        final String dotFile = Params.getParameter(cli, Params.DOT_FILE_ARG); // "jive-core-3000.5.0.jar-fas-clean.dot.comp.dot.out";
-        final String xlsxFile = Params.getParameter(cli, Params.XLS_FILE_ARG, "blast-radius-output.xlsx");
+        final String mappingFile = getParameter(cli, CSV_FILE_ARG); // "jive-core-v2-FAs-97-components.csv";
+        final String dotFile = getParameter(cli, DOT_FILE_ARG); // "jive-core-3000.5.0.jar-fas-clean.dot.comp.dot.out";
+        final String xlsxFile = getParameter(cli, XLS_FILE_ARG, "blast-radius-output.xlsx");
 
         Map<String, String> faMapping = PackageMapper.loadMapping(mappingFile);
 
@@ -171,7 +177,7 @@ public class BlastRadius {
         // Create a Row
         Row headerRow = sheet.createRow(0);
         // Create cells
-        for(int i = 0; i < COLUMNS.length; i++) {
+        for (int i = 0; i < COLUMNS.length; i++) {
             Cell cell = headerRow.createCell(i);
             cell.setCellValue(COLUMNS[i]);
             cell.setCellStyle(headerCellStyle);

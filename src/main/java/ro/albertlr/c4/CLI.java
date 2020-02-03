@@ -50,7 +50,7 @@ public class CLI {
         String jiraSourceKey = Params.getParameter(cli, Params.SOURCE_ARG);
         final Processor.Name action = Processor.Name.from(Params.getParameter(cli, Params.ACTION_ARG));
 
-        try (final Context context = new Context();) {
+        try (final Context context = Context.builder().build();) {
             switch (action) {
 //                case GET: {
 //                    Issue issue = action.execute(jira, jiraSourceKey);

@@ -34,14 +34,28 @@ import org.apache.commons.cli.ParseException;
 public class Params {
 
     public static final String DOT_FILE_ARG = "dot-file";
+    public static final String PROCESSED_DOT_FILE_ARG = "processed-dot-file";
+    public static final String NORMALIZED_DOT_FILE_ARG = "normalized-dot-file";
     public static final String CSV_FILE_ARG = "csv-file";
     public static final String XLS_FILE_ARG = "xls-file";
+
+    public static final String MAP_JIVE_COMPONENTS = "map-jive-components";
+
+    public static final String FILTER_JIVE_COMPONENTS = "filter-jive-components";
+    public static final String FILTER_EXTERNAL_COMPONENTS = "filter-external-components";
+    public static final String FILTER_UNIQUE_COMPONENTS = "filter-unique-components";
+
+    public static final String GENERATE_PDF_GRAPH = "generate-pdf";
 
     public static final String SOURCE_ARG = "source";
     public static final String PROJECT_ARG = "project";
     public static final String ACTION_ARG = "action";
     public static final String TARGET_ARG = "target";
     public static final String LINK_TYPE_ARG = "link-type";
+
+    public static boolean not(boolean value) {
+        return !value;
+    }
 
     public static String getParameter(CommandLine cli, String argument, String defaultValue) {
         if (cli.hasOption(argument)) {
@@ -97,14 +111,90 @@ public class Params {
         return commandLine(parser(), blastRadiusOptions(), args);
     }
 
-    public static void blastRadiusPrintUsage() {
-        // automatically generate the help statement
-        HelpFormatter formatter = new HelpFormatter();
-        formatter.printHelp("jira-cli", options());
-        System.exit(1);
+    public static Options packageToComponentOptions() {
+        Options options = new Options();
+        options.addOption(
+                Option.builder("d")
+                        .required()
+                        .longOpt(DOT_FILE_ARG)
+                        .desc("Dot file")
+                        .hasArg()
+                        .argName("dot-file")
+                        .build()
+        );
+        options.addOption(
+                Option.builder("p")
+                        .longOpt(PROCESSED_DOT_FILE_ARG)
+                        .desc("Processed (output) dot file. By default will be <dot-file>.comp.dot")
+                        .hasArg()
+                        .argName("dot-file")
+                        .build()
+        );
+        options.addOption(
+                Option.builder()
+                        .longOpt(NORMALIZED_DOT_FILE_ARG)
+                        .desc("Normalized (output) dot file. By default will be <processed-dot-file>.out")
+                        .hasArg()
+                        .argName("dot-file")
+                        .build()
+        );
+
+        options.addOption(
+                Option.builder("c")
+                        .required()
+                        .longOpt(CSV_FILE_ARG)
+                        .desc("CSV file (actually not comma, need to be semi-colon separated)")
+                        .hasArg()
+                        .argName("csv-file")
+                        .build()
+        );
+
+        options.addOption(
+                Option.builder()
+                        .longOpt(MAP_JIVE_COMPONENTS)
+                        .desc("Map Jive components. Map Jive's internal components too. " +
+                                "Disabled by default. If this flag is present, will enable it.")
+                        .build()
+        );
+
+        options.addOption(
+                Option.builder()
+                        .longOpt(GENERATE_PDF_GRAPH)
+                        .desc("Generate PDF Graph from resulting dot file. " +
+                                "Disabled by default. If this flag is present, will enable it." +
+                                "NOTE: for big dot files it will take a huge amount of time !!!")
+                        .build()
+        );
+
+        options.addOption(
+                Option.builder()
+                        .longOpt(FILTER_JIVE_COMPONENTS)
+                        .desc("Filter Jive components. Filter out packages starting with com.jive or com.jivesoftware. " +
+                                "Disabled by default. If this flag is present, will enable it.")
+                        .build()
+        );
+        options.addOption(
+                Option.builder()
+                        .longOpt(FILTER_EXTERNAL_COMPONENTS)
+                        .desc("Filter External components. Filter out packages starting with com.somecomp, or java.util, etc. " +
+                                "Enabled by default. If this flag is present, will disable it.")
+                        .build()
+        );
+        options.addOption(
+                Option.builder()
+                        .longOpt(FILTER_UNIQUE_COMPONENTS)
+                        .desc("Filter out unique components. Filter out link duplication. " +
+                                "Enabled by default. If this flag is present, will disable it.")
+                        .build()
+        );
+
+        return options;
     }
 
 
+    public static CommandLine packageToComponentCli(String[] args) {
+        return commandLine(parser(), packageToComponentOptions(), args);
+    }
 
     public static Options options() {
         Options options = new Options();

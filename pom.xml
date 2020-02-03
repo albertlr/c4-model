@@ -144,6 +144,7 @@
                             </archive>
                         </configuration>
                     </execution>
+
                     <execution>
                         <id>blast-radius-cli</id>
                         <phase>package</phase> <!-- bind to the packaging phase -->
@@ -158,6 +159,25 @@
                             <archive>
                                 <manifest>
                                     <mainClass>ro.albertlr.c4.BlastRadius</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>mapping-cli</id>
+                        <phase>package</phase> <!-- bind to the packaging phase -->
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                            </descriptorRefs>
+                            <finalName>${project.artifactId}-${project.version}-mapping-cli</finalName>
+                            <archive>
+                                <manifest>
+                                    <mainClass>ro.albertlr.c4.processor.LinksProcessor</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>

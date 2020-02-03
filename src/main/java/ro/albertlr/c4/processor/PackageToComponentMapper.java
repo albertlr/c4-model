@@ -7,9 +7,9 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -21,12 +21,12 @@ package ro.albertlr.c4.processor;
 
 import com.google.common.base.Predicate;
 import com.google.common.base.Stopwatch;
-import com.google.common.base.Strings;
 import com.google.common.collect.Sets;
 import lombok.experimental.UtilityClass;
 import me.tongfei.progressbar.ProgressBar;
 import org.eclipse.collections.impl.set.mutable.UnifiedSet;
 import ro.albertlr.c4.Configuration;
+import ro.albertlr.c4.Context;
 import ro.albertlr.c4.csv.PackageMapper;
 import ro.albertlr.c4.graph.Component;
 import ro.albertlr.c4.graph.Link;
@@ -45,25 +45,29 @@ import static ro.albertlr.c4.processor.LinksProcessor.unique;
 @UtilityClass
 public class PackageToComponentMapper {
 
-    public static void mapAndSave(String inputDot, String mappingFile, String outputDot) throws IOException {
-        Set<Link> outputLinks = map(inputDot, mappingFile);
+    public static void mapAndSave(Context context) throws IOException {
+        Set<Link> outputLinks = map(context.getDotFile(), context.getCsvFile());
 
         // uncomment next section if you want only clean jive components
-
-        outputLinks = unique(
-                filterExternalComponents(
-                        filterJiveComponents(
-                                Sets.newHashSet(outputLinks)
-                        )
-                )
-        );
+        outputLinks = Sets.newHashSet(outputLinks);
+        if (context.isFilterJiveComponents()) {
+            outputLinks = filterJiveComponents(outputLinks);
+        }
+        if (context.isFilterExternalComponents()) {
+            outputLinks = filterExternalComponents(outputLinks);
+        }
+        if (context.isFilterUniqueComponents()) {
+            outputLinks = unique(outputLinks);
+        }
 
         // comment next section if you want only clean jive components
 
-//        outputLinks = mapJiveComponents(outputLinks);
+        if (context.isMapJiveComponents()) {
+            outputLinks = mapJiveComponents(outputLinks);
+        }
 
         LinksProcessor.saveToDots(
-                outputDot,
+                context.getOutputDotFile(),
                 outputLinks
         );
     }
