@@ -22,17 +22,29 @@ package ro.albertlr.c4;
 import com.google.common.base.Splitter;
 import com.google.common.base.Strings;
 import com.google.common.collect.Sets;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Font;
+import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import ro.albertlr.c4.csv.PackageMapper;
 import ro.albertlr.c4.graph.Component;
 import ro.albertlr.c4.graph.Link;
 import ro.albertlr.c4.processor.LinksProcessor;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class BlastRadius {
+    private static final String[] COLUMNS = {"Component", "No. of First Degree Components", "First Degree Blast Radius", "No. of Second Degree Components", "Second Degree Blast Radius", "Blast Radius", "First Degree Components", "Second Degree Components"};
     public static void main(String[] args) throws Exception {
 
         final String mappingFile = "jive-core-v2-FAs-97-components.csv";
@@ -68,7 +80,7 @@ public class BlastRadius {
 
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = prepareExcelFile(workbook);
-        File file = new File("/Users/ssc/Downloads/shakeel.xlsx");
+        File file = new File("shakeel.xlsx");
         FileOutputStream outputStream = new FileOutputStream(file);
         try {
 
