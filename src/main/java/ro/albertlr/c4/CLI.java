@@ -59,7 +59,7 @@ public class CLI {
 //                }
 //                break;
                 default:
-                    Params.printUsage();
+                    Params.printUsage(Params.options());
                     break;
             }
         }

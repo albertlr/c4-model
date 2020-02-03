@@ -22,6 +22,7 @@ package ro.albertlr.c4;
 import com.google.common.base.Splitter;
 import com.google.common.base.Strings;
 import com.google.common.collect.Sets;
+import org.apache.commons.cli.CommandLine;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
@@ -46,12 +47,13 @@ import java.util.stream.Collectors;
 public class BlastRadius {
     private static final String[] COLUMNS = {"Component", "No. of First Degree Components", "First Degree Blast Radius", "No. of Second Degree Components", "Second Degree Blast Radius", "Blast Radius", "First Degree Components", "Second Degree Components"};
     public static void main(String[] args) throws Exception {
+        CommandLine cli = Params.blastRadiusCli(args);
 
-        final String mappingFile = "jive-core-v2-FAs-97-components.csv";
+        final String mappingFile = Params.getParameter(cli, Params.CSV_FILE_ARG); // "jive-core-v2-FAs-97-components.csv";
+        final String dotFile = Params.getParameter(cli, Params.DOT_FILE_ARG); // "jive-core-3000.5.0.jar-fas-clean.dot.comp.dot.out";
+        final String xlsxFile = Params.getParameter(cli, Params.XLS_FILE_ARG, "blast-radius-output.xlsx");
 
         Map<String, String> faMapping = PackageMapper.loadMapping(mappingFile);
-
-        final String dotFile = "jive-core-3000.5.0.jar-fas-clean.dot.comp.dot.out";
 
         Set<Link> links = LinksProcessor.loadLinks(dotFile);
 
@@ -80,7 +82,7 @@ public class BlastRadius {
 
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = prepareExcelFile(workbook);
-        File file = new File("shakeel.xlsx");
+        File file = new File(xlsxFile);
         FileOutputStream outputStream = new FileOutputStream(file);
         try {
 

@@ -125,24 +125,44 @@
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>2.2.1</version>
-                <configuration>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                    <archive>
-                        <manifest>
-                            <mainClass>ro.albertlr.c4.CLI</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
                 <executions>
                     <execution>
-                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
+                        <id>cli</id>
                         <phase>package</phase> <!-- bind to the packaging phase -->
                         <goals>
                             <goal>single</goal>
                         </goals>
+                        <configuration>
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                            </descriptorRefs>
+                            <finalName>${project.artifactId}-${project.version}-cli</finalName>
+                            <archive>
+                                <manifest>
+                                    <mainClass>ro.albertlr.c4.CLI</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
                     </execution>
+                    <execution>
+                        <id>blast-radius-cli</id>
+                        <phase>package</phase> <!-- bind to the packaging phase -->
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                            </descriptorRefs>
+                            <finalName>${project.artifactId}-${project.version}-blast-radius-cli</finalName>
+                            <archive>
+                                <manifest>
+                                    <mainClass>ro.albertlr.c4.BlastRadius</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+
                 </executions>
             </plugin>
             <plugin>
