@@ -1,3 +1,22 @@
+/*-
+ * #%L
+ * c4-model
+ *  
+ * Copyright (C) 2019 - 2020 László-Róbert, Albert (robert@albertlr.ro)
+ *  
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
 package ro.albertlr.c4.git;
 
 import java.io.File;
@@ -16,9 +35,9 @@ import org.eclipse.jgit.util.io.DisabledOutputStream;
 
 public class GitIntegration {
 
-    private static final String SORUCE_FOLDER_PREFIX = "src/main/java";
-    private static final String SORUCE_FOLDER_PREFIX_REGEXP = ".*\\/src\\/main\\/java\\/";
-    private static final String SORUCE_FILE_REGEXP = "\\/[A-Z].*.java";
+    private static final String SOURCE_FOLDER_PREFIX = "src/main/java";
+    private static final String SOURCE_FOLDER_PREFIX_REGEXP = ".*\\/src\\/main\\/java\\/";
+    private static final String SOURCE_FILE_REGEXP = "\\/[A-Z].*.java";
     private static final String SOURCE_FILE_EXTENSION = ".java";
 
     static Repository repository;
@@ -27,30 +46,12 @@ public class GitIntegration {
         repository = new FileRepositoryBuilder().setGitDir(new File(dotGitFolderURL)).build();
     }
 
-    public static void main(String[] args) throws Exception {
-
-        // ObjectId commit1 = ObjectId.fromString("8b8cf76921553173e6a52cd94a66be9ffdeab8fd");
-        // ObjectId commit2 = ObjectId.fromString("c011c4a5977be3d0eaf2d5536a87782879b84910");
-
-        GitIntegration gitIntegration = new GitIntegration(
-                "D:/Programowanie/Jive/Kody/Search/jive-search-ingress/.git");
-        System.out.println(gitIntegration.getModifyedPackageBetweenComits("8b8cf76921553173e6a52cd94a66be9ffdeab8fd",
-                "c011c4a5977be3d0eaf2d5536a87782879b84910"));
-
-                System.out.println("service/src/main/java/com/jivesoftware/search/ingress/pollers/ProfileIngressSQSPoller.java".contains(".java"));
-
-        // System.out.println("service/src/main/java/com/jivesoftware/search/ingress/pollers/ProfileIngressSQSPoller.java"
-        // .replaceFirst(SORUCE_FOLDER_PREFIX_REGEXP, "")
-        // .replaceFirst(, "")
-        // .replaceAll("\\/", "."));
-    }
-
-    public Set<String> getModifyedPackageBetweenComits(String commit1, String comit2) throws IOException{
+    public Set<String> getPackageChangedBetweenCommits(String commit1, String comit2) throws IOException{
         return getFilesChangedBeteenCommits( commit1,  comit2).stream()
-        .filter(path -> path.contains(SORUCE_FOLDER_PREFIX))
+        .filter(path -> path.contains(SOURCE_FOLDER_PREFIX))
         .filter(path -> path.contains(SOURCE_FILE_EXTENSION))
-        .map(path -> path.replaceFirst(SORUCE_FOLDER_PREFIX_REGEXP, "")
-        .replaceFirst(SORUCE_FILE_REGEXP, "")
+        .map(path -> path.replaceFirst(SOURCE_FOLDER_PREFIX_REGEXP, "")
+        .replaceFirst(SOURCE_FILE_REGEXP, "")
         .replaceAll("\\/", "."))
         .collect(Collectors.toSet());
     }

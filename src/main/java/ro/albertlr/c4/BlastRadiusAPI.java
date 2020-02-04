@@ -83,7 +83,7 @@ public class BlastRadiusAPI {
     public Set<String> getFunctionalAreaForCommints(String commit1, String commit2) throws Exception {
         gitIntegration = new GitIntegration(projectFolder);
 
-        Set<String> affetedPackages = gitIntegration.getModifyedPackageBetweenComits(commit1, commit2);
+        Set<String> affetedPackages = gitIntegration.getPackageChangedBetweenCommits(commit1, commit2);
         log.info(": packages changed:");
         affetedPackages.forEach(log::info);
 
