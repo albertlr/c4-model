@@ -22,11 +22,14 @@ package ro.albertlr.c4.csv;
 import com.google.common.base.Stopwatch;
 import lombok.experimental.UtilityClass;
 import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.CSVRecord;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,15 +39,19 @@ public class PackageMapper {
     private static final int PACKAGE_IDX = 0;
     private static final int COMPONENT_IDX = 1;
 
+    private static CSVFormat csvFormat() {
+        return CSVFormat.DEFAULT
+                .withDelimiter(';')
+                .withFirstRecordAsHeader();
+    }
+
     public static Map<String, String> loadMapping(String csv) throws IOException {
         Stopwatch stopwatch = Stopwatch.createStarted();
         System.out.printf(":: mapping CSV %s loading started ::%n", csv);
         Map<String, String> mapping = new HashMap<>();
 
         Reader input = new FileReader(csv);
-        Iterable<CSVRecord> records = CSVFormat.DEFAULT
-                .withDelimiter(';')
-                .withFirstRecordAsHeader()
+        Iterable<CSVRecord> records = csvFormat()
                 .parse(input);
 
         for (CSVRecord record : records) {
@@ -56,6 +63,27 @@ public class PackageMapper {
 
         System.out.printf(":: mapping CSV %s loading completed in %s ::%n", csv, stopwatch);
         return mapping;
+    }
+
+    public static void saveMapping(String filename, Collection<Iterable<String>> records, Header... headers) throws IOException {
+        try (FileWriter out = new FileWriter(filename);
+             CSVPrinter printer = csvFormat()
+                     .withHeader(headers(headers))
+                     .print(out);) {
+            for (Iterable<String> record : records) {
+                printer.printRecord(record);
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    private String[] headers(Header... headers) {
+        String[] headersText = new String[headers.length];
+        for (int i = 0; i < headers.length; i++) {
+            headersText[i] = headers[i].name();
+        }
+        return headersText;
     }
 
 }

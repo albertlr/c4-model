@@ -231,4 +231,24 @@ public class LinksProcessor {
         }
     }
 
+    public static void saveToCsv(String output, Set<Link> links) {
+        Stopwatch stopwatch = Stopwatch.createStarted();
+        System.out.printf(":: start saving %s links to csv file to %s ::%n", links.size(), output);
+        boolean oldPrintLibrary = Configuration.getInstance().isPrintLibrary();
+        try {
+            Path path = Paths.get(output);
+            Collection<String> lines = new ArrayList<>();
+            lines.add("from;to");
+
+            links.forEach(link -> lines.add(String.format("%s;%s", link.getFrom().asText(), link.getTo().asText())));
+            try {
+                Files.write(Paths.get(output), lines);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } finally {
+            System.out.printf(":: csv file generation completed in %s ::%n", stopwatch);
+        }
+    }
+
 }

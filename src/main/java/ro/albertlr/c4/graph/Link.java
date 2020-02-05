@@ -23,11 +23,13 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.ComparisonChain;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import ro.albertlr.c4.processor.LinksProcessor;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import static com.google.common.base.CharMatcher.is;
 import static com.google.common.base.CharMatcher.whitespace;
@@ -83,6 +85,18 @@ public class Link implements Iterable<Link>, Comparable<Link> {
     @Override
     public String toString() {
         return "  \"" + from.toString() + "\" -> \"" + to.toString() + "\";";
+    }
+
+    public static void main(String[] args) {
+        String dotFile = args[0];
+
+        Set<Link> links = LinksProcessor.loadLinks(dotFile);
+
+        LinksProcessor.saveToCsv(dotFile + ".csv", links);
+    }
+
+    public String asCsv() {
+        return from.asText() + "\t" + to.asText();
     }
 
     private volatile transient Collection<Link> links;
