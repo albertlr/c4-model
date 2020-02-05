@@ -1,0 +1,28 @@
+search-ingress-application-lifecycle;JVSRCH-10237 Search > Ingress;
+search-ingress-query-handler;JVSRCH-10237 Search > Ingress;
+search-ingress-tenant-metadata-handler;JVSRCH-10237 Search > Ingress;
+search-ingress-application-lifecycle;JVSRCH-10237 Search > Ingress;
+search-ingress-adapter-application-lifecycle;JVSRCH-10237 Search > Ingress;
+search-ingress-adapter-api;JVSRCH-10237 Search > Ingress;
+search-ingress-adapter-queue-integration;JVSRCH-10237 Search > Ingress;
+search-ingress-adapter-application-lifecycle;JVSRCH-10237 Search > Ingress;
+search-ingress-adapter-kinesis-integration;JVSRCH-10237 Search > Ingress;
+search-ingress-adapter-tenant-metadata-handler;JVSRCH-10237 Search > Ingress;
+search-query-application-lifecycle;JVSRCH-10236 Search > Content;JVSRCH-10235 Search > People;JVSRCH-10234 Search > Places;JVSRCH-10233 Search > Spotlight Search;JVSRCH-10232 Search > multi-languages;JVSRCH-10231 Search > Synonym searching;JVSRCH-10230 Search > Phrases & Boolean Operations & Letter sequences;JVSRCH-10229 Search > Highlighting;JVSRCH-10206 Search > Main Search;
+search-query-redis-integration;JVSRCH-10236 Search > Content;JVSRCH-10235 Search > People;JVSRCH-10234 Search > Places;JVSRCH-10233 Search > Spotlight Search;JVSRCH-10232 Search > multi-languages;JVSRCH-10231 Search > Synonym searching;JVSRCH-10230 Search > Phrases & Boolean Operations & Letter sequences;JVSRCH-10229 Search > Highlighting;JVSRCH-10206 Search > Main Search;
+search-query-api;JVSRCH-10236 Search > Content;JVSRCH-10235 Search > People;JVSRCH-10234 Search > Places;JVSRCH-10233 Search > Spotlight Search;JVSRCH-10232 Search > multi-languages;JVSRCH-10231 Search > Synonym searching;JVSRCH-10230 Search > Phrases & Boolean Operations & Letter sequences;JVSRCH-10229 Search > Highlighting;JVSRCH-10206 Search > Main Search;
+search-query-health-check;JVSRCH-10236 Search > Content;JVSRCH-10235 Search > People;JVSRCH-10234 Search > Places;JVSRCH-10233 Search > Spotlight Search;JVSRCH-10232 Search > multi-languages;JVSRCH-10231 Search > Synonym searching;JVSRCH-10230 Search > Phrases & Boolean Operations & Letter sequences;JVSRCH-10229 Search > Highlighting;JVSRCH-10206 Search > Main Search;
+search-query-query-processing;JVSRCH-10236 Search > Content;JVSRCH-10235 Search > People;JVSRCH-10234 Search > Places;JVSRCH-10233 Search > Spotlight Search;JVSRCH-10232 Search > multi-languages;JVSRCH-10231 Search > Synonym searching;JVSRCH-10230 Search > Phrases & Boolean Operations & Letter sequences;JVSRCH-10229 Search > Highlighting;JVSRCH-10206 Search > Main Search;
+search-essp-application-lifecycle;JVSRCH-10236 Search > Content;JVSRCH-10235 Search > People;JVSRCH-10234 Search > Places;JVSRCH-10233 Search > Spotlight Search;JVSRCH-10232 Search > multi-languages;JVSRCH-10231 Search > Synonym searching;JVSRCH-10230 Search > Phrases & Boolean Operations & Letter sequences;JVSRCH-10229 Search > Highlighting;JVSRCH-10206 Search > Main Search;
+search-essp-info-api;JVSRCH-10236 Search > Content;JVSRCH-10235 Search > People;JVSRCH-10234 Search > Places;JVSRCH-10233 Search > Spotlight Search;JVSRCH-10232 Search > multi-languages;JVSRCH-10231 Search > Synonym searching;JVSRCH-10230 Search > Phrases & Boolean Operations & Letter sequences;JVSRCH-10229 Search > Highlighting;JVSRCH-10206 Search > Main Search;
+search-essp-r2e2-integration;JVSRCH-10236 Search > Content;JVSRCH-10235 Search > People;JVSRCH-10234 Search > Places;JVSRCH-10233 Search > Spotlight Search;JVSRCH-10232 Search > multi-languages;JVSRCH-10231 Search > Synonym searching;JVSRCH-10230 Search > Phrases & Boolean Operations & Letter sequences;JVSRCH-10229 Search > Highlighting;JVSRCH-10206 Search > Main Search;
+search-shared-ingress-library;JVSRCH-10237 Search > Ingress;JVSRCH-10236 Search > Content;JVSRCH-10235 Search > People;JVSRCH-10234 Search > Places;JVSRCH-10233 Search > Spotlight Search;JVSRCH-10232 Search > multi-languages;JVSRCH-10231 Search > Synonym searching;JVSRCH-10230 Search > Phrases & Boolean Operations & Letter sequences;JVSRCH-10229 Search > Highlighting;JVSRCH-10206 Search > Main Search
+search-shared-commons-library;JVSRCH-10237 Search > Ingress;JVSRCH-10236 Search > Content;JVSRCH-10235 Search > People;JVSRCH-10234 Search > Places;JVSRCH-10233 Search > Spotlight Search;JVSRCH-10232 Search > multi-languages;JVSRCH-10231 Search > Synonym searching;JVSRCH-10230 Search > Phrases & Boolean Operations & Letter sequences;JVSRCH-10229 Search > Highlighting;JVSRCH-10206 Search > Main Search
+search-shared-query-library;JVSRCH-10236 Search > Content;JVSRCH-10235 Search > People;JVSRCH-10234 Search > Places;JVSRCH-10233 Search > Spotlight Search;JVSRCH-10232 Search > multi-languages;JVSRCH-10231 Search > Synonym searching;JVSRCH-10230 Search > Phrases & Boolean Operations & Letter sequences;JVSRCH-10229 Search > Highlighting;JVSRCH-10206 Search > Main Search;
+search-api;JVSRCH-10237 Search > Ingress;JVSRCH-10236 Search > Content;JVSRCH-10235 Search > People;JVSRCH-10234 Search > Places;JVSRCH-10233 Search > Spotlight Search;JVSRCH-10232 Search > multi-languages;JVSRCH-10231 Search > Synonym searching;JVSRCH-10230 Search > Phrases & Boolean Operations & Letter sequences;JVSRCH-10229 Search > Highlighting;JVSRCH-10206 Search > Main Search
+search-bot-application-lifecycle;LEGACY FA;
+search-bot-health-check;LEGACY FA;
+search-recovery-storage-application-lifecycle;LEGACY FA;
+search-recovery-storage-backup-service;LEGACY FA;
+search-recovery-storage-tenant-metadata-handler;LEGACY FA;
+r2e2-stream-client;LEGACY FA;
